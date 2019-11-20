@@ -1618,9 +1618,13 @@ body.nobg .section1 {
 }
 
 .dmbox {
-  margin: 0;
+  
+  width: 350px;
+  height: 250px;
+
+  margin: 10;
   border: 0;
-  border: 1px solid #EDEDED;
+  border: 0px solid #EDEDED;
   background-color: #fff;
   padding: 9px 18px;
   -webkit-border-radius: 0;

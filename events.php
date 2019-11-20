@@ -172,18 +172,12 @@ if( !empty($_SESSION) )
                         </div>
                       
                         <div class="general-title text-center">
-                          <h3>Join to our events!</h3>
-                          <p>
-                          We have designed our I Lab U speed dating events, so they mimic the steps of a good first date, <br> 
-                          that inspired relevant interesting scientific topics. In each of our events you will get the unique <br>
-                           chance to meet real-life scientists face-to-face and ask them all of your burning questions about their science! <br>
-                            Whether you are interested in learning more about climate change, philosophy, pediatrics or engineering, <br>
-                            we have a topic for you! Learn more about our events below.                        
-                          </p>          
+                          <h3>Join to our events!</h3>                          
                         </div>     
+                        
 
     <div class="container clearfix">
-
+    
 <!--
                   <section class="section1">
                     <div class="container" >
@@ -198,11 +192,22 @@ if( !empty($_SESSION) )
                     </div>
                 </section>        
 -->  
-
+                        <center>
+                          <p>
+                          We have designed our I Lab U speed dating events, so they mimic the steps of a good first date, <br> 
+                          that inspired relevant interesting scientific topics. In each of our events you will get the unique <br>
+                           chance to meet real-life scientists face-to-face and ask them all of your burning questions about their science! <br>
+                            Whether you are interested in learning more about climate change, philosophy, pediatrics or engineering, <br>
+                            we have a topic for you! Learn more about our events below.                        
+                          </p>          
+                        </center>
 
       <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
-
+      
         <div class="col-lg-4 col-md-4 col-sm-12">
+
+
+
           <div class="dmbox">
             <div class="service-icon">
               <div class="dm-icon-effect-1" data-effect="slide-bottom">
@@ -211,10 +216,11 @@ if( !empty($_SESSION) )
                     </a>
               </div>
             </div>
-            <h4>1. Spark Between Us</h4>
+            <h4>Spark between us</h4>
             <p>Electrical engineering, neurobiology, robotics, behavioral and computer sciences.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
-          </div>                  
+          </div> 
+                           
         </div>
 
    
@@ -231,7 +237,7 @@ if( !empty($_SESSION) )
                 </a>
               </div>
             </div>
-            <h4>2. Getting closer</h4>
+            <h4>Getting closer</h4>
             <p>Virology, Microbiology, Transport, Astronomy, Nanotechnology, and Psychology.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
           </div>
@@ -248,7 +254,7 @@ if( !empty($_SESSION) )
                 </a>
               </div>
             </div>
-            <h4>3. Let's talk about life</h4>
+            <h4>Let's talk about life</h4>
             <p>Medicine, Biomedical sciences, Sociology, Artificial intelligence, and Philosophy.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
           </div>
@@ -257,7 +263,7 @@ if( !empty($_SESSION) )
     
 
 
-        <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="dmbox">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
@@ -266,7 +272,7 @@ if( !empty($_SESSION) )
                   </a>
                 </div>
               </div>
-              <h4>4. Who pays the bill?</h4>
+              <h4>Who pays the bill?</h4>
               <p>Finances, Management, Logistics, Health economy, and Psychology.</p>
               <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
             </div>
@@ -274,7 +280,7 @@ if( !empty($_SESSION) )
 
 
             
-        <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="dmbox">
                 <div class="service-icon">
                   <div class="dm-icon-effect-1" data-effect="slide-bottom">
@@ -283,12 +289,12 @@ if( !empty($_SESSION) )
                     </a>
                   </div>
                 </div>
-                <h4>5. What's next?</h4>                
+                <h4>What's next?</h4>                
                 <p>Environment, Architecture, Urban planning, Global warming, Green energy, and Pediatrics.</p>
                 <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
               </div>
         </div>
-            
+
         <!-- end dmbox -->
 
         <div class="clearfix"></div>
@@ -299,7 +305,7 @@ if( !empty($_SESSION) )
         <div class="container" >
             
             <div class="show-event1" style="display:none;">
-              <h3>The Spark Between Us</h3>
+              <h3>Spark Between Us</h3>
               <p>
               What causes the initial spark between two people? Is it a smile your date gives you when you meet? The first accidental touch? Or something more scientific, like a combination of chemicals flooding in your brain because of your compatible pheromones? Let’s see what the explanation for this wonderful sensation might be! In this event you may meet from neuroscientists working on the electrical synapses in our brain, to behavioral scientists shedding light on how human emotions work, or to electrical engineers discussing actual sparks! 
    <p>
@@ -454,7 +460,7 @@ if( !empty($_SESSION) )
                 <li class="bbp-forum-info">
                   <a class="bbp-forum-title" title="General">Who pays the bill?</a>                  
                 </li>
-                <li class="bbp-forum-topic-count">24/04/19</li>
+                <li class="bbp-forum-topic-count">24/04/20</li>
                 <li class="bbp-forum-topic-count">Rotterdam</li>     
               </ul>
               <!-- end bbp forums -->
@@ -465,7 +471,7 @@ if( !empty($_SESSION) )
                 <li class="bbp-forum-info">
                   <a class="bbp-forum-title" title="General">What's next?</a>                  
                 </li>                
-                <li class="bbp-forum-topic-count">29/05/19</li>
+                <li class="bbp-forum-topic-count">29/05/20</li>
                 <li class="bbp-forum-topic-count">Delft</li>
                 
               </ul>

@@ -22,7 +22,9 @@
 
   <section class="section1">
     <div class="container" >
-      <h1>I Lab U</h1>      
+      <center>
+      <h1>I Lab U: Speed Date a Scientist</h1>      
+      </center>
       <br/><br/>
       <p>          
       Have you ever wondered what scientists actually do? Do they just run around in their white coats, mumbling incomprehensible words, and mixing random chemicals? Or are they locked in a room behind stacks of papers pulling their hair out coming up with the next Frankenstein’s monster? Do astronomers sit all day long behind a computer working on complicated algorithms that will allow us to observe far away galaxies? Are economists real wolves of Wall Street? If you want to find out what actual scientists look like, you are in the right place.
@@ -37,8 +39,11 @@
       All our events are completely free, and we also provide you with drinks and snacks. The only thing we need in return is an open mind and your answers to a few questions that we have for you. We will use your answers to better understand how we can help communication between scientists and the public, but also how to improve our next events. So, in a way we are all scientists for a night!
       </p>
       <center>
+      <br><br>
       <h3><a href="register.php">Register here </a>and join our events! </h3>
+      <br><br>      
       </center>
+      <p style="float:right;"><strong>... because everybody is looking for someone to lab!</strong> </p>
     </div>    
   </section>
 <!-- Content Ends hhere -->

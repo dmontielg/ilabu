@@ -31,7 +31,7 @@
       
           <div class="general-title text-center">
           <h3>About our Team</h3>
-          <p>We are a team of seven researchers based at the Department of Genetic Identification at Erasmus MC in Rotterdam. </p>          
+          <p>We are a team of seven researchers based at the <br> Department of Genetic Identification <br> at Erasmus MC in Rotterdam. </p>          
           
         </div>
         
@@ -47,7 +47,7 @@
       <div class="column">
         <div class="card">                  
             <div class="container">
-                  <img src="img/staff/athina.jpg" alt="athina" style="width:10%;">
+                  <img src="img/staff/athina.jpg" alt="athina" style="width:15%;">
                   <h2>Dr. Athina Vidaki</h2>
                   <p>
                   Athina is a postdoctoral research fellow, conducting innovative research in the field of epigenetics for forensic and medical applications. She is the initiator and coordinator of the I Lab U project, overviewing all ongoing activities. She is passionate about science communication, with plenty of experience as a STEMNET forensic science ambassador. She always tries to find a chance to connect to the public and talk about her research – and yes, she loves talking too!
