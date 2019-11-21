@@ -31,7 +31,7 @@
       
           <div class="general-title text-center">
           <h3>About our Team</h3>
-          <p>We are a team of seven researchers based at the <br> Department of Genetic Identification <br> at Erasmus MC in Rotterdam. </p>          
+          <p>We are a team of seven researchers based at the Department of Genetic Identification <br> at Erasmus MC in Rotterdam. </p>          
           
         </div>
         

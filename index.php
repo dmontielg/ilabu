@@ -12,9 +12,13 @@
 <?php $component->getHeader(basename($_SERVER['PHP_SELF'])); ?>
 
 <!-- Content Starts here -->
-  <section id="intro">
-    <div class="container">
-        <div class ="container">
+<br><br>
+  <center>
+            <h1>Speed Date a Scientist</h1>      
+        </center>
+  <section id="intro">  
+    <div class="container">    
+        <div class ="container">        
             <img src="img/ilabu/banner.png" alt="banner-ilabu" />
         </div>
     </div>
@@ -22,9 +26,9 @@
 
   <section class="section1">
     <div class="container" >
-      <center>
-      <h1>I Lab U: Speed Date a Scientist</h1>      
-      </center>
+    <center>
+    <p style=""><strong>Because everybody is looking for someone to... lab!</strong> </p>      
+    </center>
       <br/><br/>
       <p>          
       Have you ever wondered what scientists actually do? Do they just run around in their white coats, mumbling incomprehensible words, and mixing random chemicals? Or are they locked in a room behind stacks of papers pulling their hair out coming up with the next Frankenstein’s monster? Do astronomers sit all day long behind a computer working on complicated algorithms that will allow us to observe far away galaxies? Are economists real wolves of Wall Street? If you want to find out what actual scientists look like, you are in the right place.
@@ -43,7 +47,7 @@
       <h3><a href="register.php">Register here </a>and join our events! </h3>
       <br><br>      
       </center>
-      <p style="float:right;"><strong>... because everybody is looking for someone to lab!</strong> </p>
+      
     </div>    
   </section>
 <!-- Content Ends hhere -->

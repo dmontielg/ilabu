@@ -23,6 +23,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ruda', sans-serif;
   font-weight: 700;
+  color: #000000;
 }
 
 p {
@@ -1618,10 +1619,11 @@ body.nobg .section1 {
 }
 
 .dmbox {
-  
-  width: 350px;
-  height: 250px;
+  float:left;
 
+  /*width: 350px;*/
+  height: 250px;
+  
   margin: 10;
   border: 0;
   border: 0px solid #EDEDED;

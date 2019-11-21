@@ -48,6 +48,7 @@
                     <div class="carousel-item active">
                       <img class="d-block w-100" src="img/staff/team.jpg" alt="First slide">
                     </div>
+                    <br><br>
                     <div class="carousel-item">
                       <img class="d-block w-100" src="img/staff/team2.jpg" alt="Second slide">
                     </div>                    
@@ -68,11 +69,13 @@
           <p>
           Last April, the Society organized a scientific competition for celebrating their 250th anniversary (impressive, isn’t it?!), inviting scientists to come up with ideas on how to experimentally help bridge the gap between scientists and the public. We were so excited that I Lab U was chosen amongst the three finalists and we got the chance to present our idea in front of the Society, and the former Queen of the Netherlands, Princess Beatrix! As winners of the competition and generously funded by the Society, I Lab U aims to connect scientists and the public via... speed dating! We believe that we can avoid miscommunication and misunderstanding of scientific information, evident more and more in our daily lives, by simply talking and listening to each other! In I Lab U we want everyone to feel equal and be given ways to communicate, in a way currently not possible from articles in newspapers, TV news or Facebook posts. 
           </p> 
+              <!--
               <div class="logo">
                   <center>
                       <img style="width:30%" src="img/ilabu/batavian.jpg" title="batavian-society" alt="batavian">
                   </center>
               </div>                      
+              -->
         </div>
 
         <!-- end col-6 -->

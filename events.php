@@ -169,35 +169,17 @@ if( !empty($_SESSION) )
                               </div>
                             </div>
                           </div>
-                        </div>
-                      
+                        </div>                      
                         <div class="general-title text-center">
                           <h3>Join to our events!</h3>                          
-                        </div>     
-                        
-
+                        </div>                             
     <div class="container clearfix">
-    
-<!--
-                  <section class="section1">
-                    <div class="container" >
-                      <center>
-                        <h2>Join to our events!</h2>          
-                      </center>
-                        <p>                        
-                       
-                      </p>
-                      <hr>
-                        
-                    </div>
-                </section>        
--->  
                         <center>
                           <p>
-                          We have designed our I Lab U speed dating events, so they mimic the steps of a good first date, <br> 
-                          that inspired relevant interesting scientific topics. In each of our events you will get the unique <br>
-                           chance to meet real-life scientists face-to-face and ask them all of your burning questions about their science! <br>
-                            Whether you are interested in learning more about climate change, philosophy, pediatrics or engineering, <br>
+                          We have designed our I Lab U speed dating events, so they mimic the steps of a good first date,  
+                          that inspired relevant interesting scientific topics. In each of our events you will get the unique 
+                           chance to meet real-life scientists face-to-face and ask them all of your burning questions about their science! 
+                            Whether you are interested in learning more about climate change, philosophy, pediatrics or engineering, 
                             we have a topic for you! Learn more about our events below.                        
                           </p>          
                         </center>
@@ -212,33 +194,27 @@ if( !empty($_SESSION) )
             <div class="service-icon">
               <div class="dm-icon-effect-1" data-effect="slide-bottom">
                     <a href="#container-show-event" class="event1">
-                        <img src="img/ilabu/logo.png" height="50%" width="50%" />
+                        <img src="img/ilabu/events/spark.jpg" height="50%" width="50%" />
                     </a>
               </div>
             </div>
             <h4>Spark between us</h4>
-            <p>Electrical engineering, neurobiology, robotics, behavioral and computer sciences.</p>
+            <p>For discussions in topics like <br> electrical engineering, neurobiology, robotics, behavioral and computer sciences.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
-          </div> 
-                           
-        </div>
-
-   
-          
+          </div>                            
+        </div>             
         <!-- end dmbox -->
-
-
         <div class="col-lg-4 col-md-4 col-sm-12">
           <div class="dmbox">
             <div class="service-icon">
               <div class="dm-icon-effect-1" data-effect="slide-bottom">
                 <a href="#container-show-event" class="event2" >
-                <img src="img/ilabu/logo.png" height="50%" width="50%" />
+                <img src="img/ilabu/events/closer.jpg" height="50%" width="50%" />
                 </a>
               </div>
             </div>
             <h4>Getting closer</h4>
-            <p>Virology, Microbiology, Transport, Astronomy, Nanotechnology, and Psychology.</p>
+            <p>For discussions in topics like <br> virology, microbiology, transport, astronomy, nanotechnology, and psychology.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
           </div>
         </div>
@@ -250,48 +226,47 @@ if( !empty($_SESSION) )
             <div class="service-icon">
               <div class="dm-icon-effect-1" data-effect="slide-bottom">
                 <a href="#container-show-event" class="event3">
-                <img src="img/ilabu/logo.png" height="50%" width="50%" />
+                <img src="img/ilabu/events/life.jpg" height="50%" width="50%" />
                 </a>
               </div>
             </div>
             <h4>Let's talk about life</h4>
-            <p>Medicine, Biomedical sciences, Sociology, Artificial intelligence, and Philosophy.</p>
+            <p>For discussions in topics like <br> medicine, biomedical sciences, sociology, artificial intelligence, and philosophy.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
           </div>
-        </div>
-
-    
+        </div>    
 
 
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <!--<div class="col-lg-4 col-md-4 col-sm-12">-->
+        <div class="col-lg-4 col-md-4 col-sm-12">        
             <div class="dmbox">
               <div class="service-icon">
                 <div class="dm-icon-effect-1" data-effect="slide-bottom">
                   <a href="#container-show-event" class="event4" >
-                  <img src="img/ilabu/logo.png" height="50%" width="50%" />
+                  <img src="img/ilabu/events/bill.jpg" height="50%" width="50%" />
                   </a>
                 </div>
               </div>
               <h4>Who pays the bill?</h4>
-              <p>Finances, Management, Logistics, Health economy, and Psychology.</p>
+              <p>For discussions in topics like <br> finances, management, logistics, health economy, and psychology.</p>
               <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
             </div>
         </div>
 
 
-            
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <!--<div class="col-lg-4 col-md-4 col-sm-12">-->    
+        <div class="col-lg-4 col-md-4 col-sm-12">
+        
               <div class="dmbox">
                 <div class="service-icon">
                   <div class="dm-icon-effect-1" data-effect="slide-bottom">
                     <a href="#container-show-event" class="event5">
-                    <img src="img/ilabu/logo.png" height="50%" width="50%" />
+                    <img src="img/ilabu/events/next.jpg" height="50%" width="50%" />
                     </a>
                   </div>
                 </div>
                 <h4>What's next?</h4>                
-                <p>Environment, Architecture, Urban planning, Global warming, Green energy, and Pediatrics.</p>
-                <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
+                <p>For discussions in topics like <br> environment, architecture, urban planning, global warming, green energy, and pediatrics.</p>                <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
               </div>
         </div>
 
@@ -391,96 +366,61 @@ if( !empty($_SESSION) )
 
         <div class="general-title text-center">
           <h3>Calendar for Events</h3>
-          <p>See the calendar for our next events!</p>
+          <p>Pick your favourite!</p>
           <hr>
-
         </div>
 
         <div class="clearfix"></div>
         <div class="divider"></div>
 
+
         <div id="bbpress-forums">
-          <ul class="bbp-forums">
-            <li class="bbp-header">
-              <ul class="forum-titles">
-                <li class="bbp-forum-info">Event</li>
-                
-                <li class="bbp-forum-topic-count">Date</li>
-                <li class="bbp-forum-reply-count">Place</li>
-                
-                
-              </ul>
-            </li>
-            <!-- .bbp-header -->
 
-            <li class="bbp-body">
-              <ul class="forum type-forum status-publish hentry loop-item-0 odd bbp-forum-status-open bbp-forum-visibility-publish">
-                <li class="bbp-forum-info">
-                  <a class="bbp-forum-title" title="General">Spark Between Us</a>                  
-                  <!-- <div class="bbp-forum-content">
-                  Electrical engineering, neurobiology, robotics, behavioral and computer sciences.
-                  </div>-->
-                </li>
-                <!-- <li class="bbp-forum-topic-count"> <h2> 01/01/19 </h2></li> -->
-                <li class="bbp-forum-topic-count">24/04/20</li>
-                <li class="bbp-forum-topic-count">Rotterdam</li>                
-              </ul>
-              <!-- end bbp forums -->
-            </li>
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>      
+                      <th scope="col">Event</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Venue</th>
+                      <th scope="col">City</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">The Spark between us</th>      
+                      <td>24.01.2020</td>
+                      <td>De Bibliotek</td>
+                      <td>Rotterdam</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Getting closer</th>      
+                      <td>28.02.2020</td>
+                      <td>Library TU Delft</td>
+                      <td>Delft</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Let's talk about life</th>
+                      <td>03.04.2020</td>
+                      <td>Erasmus MC</td>
+                      <td>Rotterdam</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Who pays the bill?</th>
+                      <td>24.04.2020</td>
+                      <td>Erasmus Pavijloen</td>
+                      <td>Rotterdam</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">What's next?</th>
+                      <td>29.05.2020</td>
+                      <td>To be confirmed</td>
+                      <td>Delft</td>
+                    </tr>    
+                  </tbody>
+                </table>
 
-            <li class="bbp-body">
-              <ul class="forum type-forum status-publish hentry loop-item-0 odd bbp-forum-status-open bbp-forum-visibility-publish">
-                <li class="bbp-forum-info">
-                  <a class="bbp-forum-title"  title="General">Getting closer</a>
-                  
-                </li>
-                <li class="bbp-forum-topic-count">28/02/20</li>
-                <li class="bbp-forum-topic-count">Delft</li>
+          </div>
 
-                <!-- <li class="bbp-forum-reply-count">Delth</li> -->
-                
-              </ul>
-              <!-- end bbp forums -->
-            </li>
-
-            <li class="bbp-body">
-              <ul class="forum type-forum status-publish hentry loop-item-0 odd bbp-forum-status-open bbp-forum-visibility-publish">
-                <li class="bbp-forum-info">
-                  <a class="bbp-forum-title" title="General">Let's talk about life</a>                  
-                </li>
-                <li class="bbp-forum-topic-count">03/04/20</li>
-                <li class="bbp-forum-topic-count">Rotterdam</li>
-       
-              </ul>
-              <!-- end bbp forums -->
-            </li>
-
-            <li class="bbp-body">
-              <ul class="forum type-forum status-publish hentry loop-item-0 odd bbp-forum-status-open bbp-forum-visibility-publish">
-                <li class="bbp-forum-info">
-                  <a class="bbp-forum-title" title="General">Who pays the bill?</a>                  
-                </li>
-                <li class="bbp-forum-topic-count">24/04/20</li>
-                <li class="bbp-forum-topic-count">Rotterdam</li>     
-              </ul>
-              <!-- end bbp forums -->
-            </li>
-
-            <li class="bbp-body">
-              <ul class="forum type-forum status-publish hentry loop-item-0 odd bbp-forum-status-open bbp-forum-visibility-publish">
-                <li class="bbp-forum-info">
-                  <a class="bbp-forum-title" title="General">What's next?</a>                  
-                </li>                
-                <li class="bbp-forum-topic-count">29/05/20</li>
-                <li class="bbp-forum-topic-count">Delft</li>
-                
-              </ul>
-              <!-- end bbp forums -->
-            </li>
-          </ul>
-          <!-- .forums-directory -->
-        </div>
-        <!-- /bbpress -->
 
       </div>
       <!-- end content -->
@@ -489,9 +429,6 @@ if( !empty($_SESSION) )
   </section>
   <!-- end section -->
 <!-- Content Ends hhere -->
-
-
-
 
 
 <?php $component->getFooter(); ?>
