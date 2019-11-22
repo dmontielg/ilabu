@@ -99,7 +99,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                             <div class="container clearfix">
                               <ul id="jetmenu_session" class="jetmenu_session blue">
                                     <li><a href="index.php">Users</a></li>
-                                    <li><a href="#">Questionnaires</a></li>
+                                    <li><a href="question.php">Questionnaires</a></li>
                             </ul>
                             </div>
                         </div>
@@ -167,7 +167,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                     echo $value["id_user"];
                     echo "</td>";
                     echo "<td>";
-                    if($value["waiting_list"] == 0)
+                    if($value["waiting_list"] == 1)
                     {echo "YES";}
                     else
                     {echo "NO";}                    

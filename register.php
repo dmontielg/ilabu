@@ -71,13 +71,14 @@ if(isset($_POST["submit"]))
                                             {   
                                                 //Send email
                                                 $to = $email;
-                                                $message = "<h1>ILabU: Speed Date a Scientist</h1>";
-                                                $message .= "<p>Please confirm your account with the following link:</p>";                                                                  
+                                                $message = "<h1>I Lab U: Speed Date a Scientist</h1>";
+                                                $message .= "<p>Please confirm your account by clicking the following link:</p>";                                                                  
                                                 $message .= "<p><a href='";
                                                 $message .= $mail_conf->getURLRegister();
                                                 $message .= $vkey."'>Register Account</a></p>";                                                                                                
                                                 #$message .= "<p><a href='http://10.96.25.183/ilabu/verify.php?vkey=$vkey'>Register Account</a></p>";                                                
-                                                $message .= "<p>Thanks for registering from the ILabU Team :)</p>";
+                                                $message .= "<p>Thank you for taking part in the I Lab U initiative! Visit our website to join one of our events.</p>
+                                                            <p>The I Lab U Team :)</p>";
                                                 $headers = "From: ilabu@erasmusmc.nl";
                                                               
                                                 try{                                                    
@@ -99,15 +100,16 @@ if(isset($_POST["submit"]))
                                           
                                                     // Content
                                                     $mail->isHTML(true);                                  // Set email format to HTML
-                                                    $mail->Subject = 'ILabU: Account verification';
+                                                    $mail->Subject = 'I Lab U Account verification';
                                                     $mail->Body    = $message;
                                                     #$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                                                     $mail->send();
                                                     #echo 'Message has been sent';
                                                     #header('location:thankyou.php?flag=TRUE');
-                                                    $error ="<h4>Thank you for registering to 
-                                                    <b>ILabU</h4></b><br/><h4>We have sent a verification email to the address provided</h4>";
+                                                    $error ="<h4>Thank you for registering in our I Lab U platform!</h4>
+                                                    
+                                                    </b><br/><h4>Please check your e-mail to verify your account.</h4>";
 
                                                 } catch (Exception $e) {
                                                     $error = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

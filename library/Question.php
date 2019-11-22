@@ -109,6 +109,24 @@
 				return $arrayquestions ;
 		}
 
+		function getAllSorted()
+		{
+				$sql = "SELECT * FROM $this->table
+				order by name_form ASC, id_survey ASC
+
+				" ;
+				$resultado = $this->connection->query($sql) ;
+				$arrayquestions = array() ;
+				if($resultado->num_rows>0)
+				{
+					while ($row = $resultado->fetch_assoc())
+					{
+						$arrayquestions[] = $row ;
+					}
+				}
+				return $arrayquestions ;
+		}
+
 		function getQuestionaire($survey, $id_role)
 		{
 			## Receives two variables string names: 
@@ -249,7 +267,7 @@
 					#echo $query["name_form"]."<br/>";            		
 					#$form .= $query["question_number"]. ".-";
 					#$form .= "<label>" . utf8_encode($query["question"]) . "</label>";
-					$form .= "<label>" .$query["question_number"]. ".-". utf8_encode($query["question"]) . "</label>";
+					$form .= "<label>" .$query["question_number"]. ". ". utf8_encode($query["question"]) . "</label>";
 					$form .= "<br/>";                                      
 						  ### In case for radio button
 						  if(strpos($query["type"], 'radio') !== false)
@@ -369,7 +387,7 @@
 									  $form .= "<input required type='radio' onclick='javascript:$name_function();' value='" .$name_other_radio."' name='". 
 									  			$query["name_form"] ."' id='".$name_other_radio."'/>";                                                                                                     
 									  $form .= utf8_encode($option[0]);                              
-									  $form .= "<div id='".$name_other_div."' style='visibility:hidden'><label for='opt'>Please explain:</label>
+									  $form .= "<div id='".$name_other_div."' style='visibility:hidden'><label for='opt'>Please specify:</label>
 											  <input type='text' id=".$name_other_input."  name=" .$name_other_input."></div>";                          
 									  echo "
 									  <html>

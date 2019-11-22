@@ -113,10 +113,7 @@ if( !empty($_SESSION) )
                                       <select name="id_info_event">
                                             <option value="NA">                                              
                                             -- Select --
-                                            </option>
-                                            <option value="6">
-                                            Practice Session (01/11/2019)
-                                            </option>
+                                            </option>                                            
                                             <option value="1">                                              
                                             1. The Spark Between Us (01/30/2020)
                                             </option>

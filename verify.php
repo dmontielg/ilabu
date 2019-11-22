@@ -14,10 +14,10 @@ if(isset($_GET["vkey"]))
             $verify = $user->updateVerifyAccount($vkey);
             if($verify){              
               $message = '
-              <h3>Thank you for registering to <b> ILabU </b></h3>
-              <h4>Your account is now Activated!</h4>
+              <h3>Thank you for registering in <b> I Lab U </b></h3>
+              <h4>Your account is now activated!</h4>
               <p>          
-              <h5>Please, <a href="login.php">login</a> and join to one of our events! </h5>
+              <h5>Please, <a href="login.php">login</a> to join one of our events! </h5>
               </p>                      
                   <div class="item">
                         <img src="img/success-icon.jpg" alt="" height="80" width="80">                        
@@ -25,7 +25,7 @@ if(isset($_GET["vkey"]))
             }else{              
               $message = '
               <h3>Sorry, something went wrong :( <b> ILabU </b></h3>
-              <h4>Your account is not Activated yet!</h4>
+              <h4>Your account is not activated yet!</h4>
               <p>          
               <h5>Please try to open the link again from your mailbox</h5>
               </p>                      
@@ -39,7 +39,7 @@ if(isset($_GET["vkey"]))
       $message = '
               <h3>Sorry, this account is invalid or already verified! <b> ILabU </b></h3>              
               <p>          
-              <h5>If you have problem to log in please send us an <a href="contact.php"> message!</a> :)</h5>
+              <h5>If you have problem loggin in, please send us a <a href="contact.php"> message!</a> :)</h5>
               </p>                      
                   <div class="item">                        
                         <img src="img/question-icon.png" alt="" height="80" width="80">

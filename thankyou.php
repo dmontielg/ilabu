@@ -17,9 +17,10 @@ if(isset($_GET["flag"]))
     <center>
           <section class="section1">
             <div class="container" >
-              <h1>Thank you for your message from the <b> ILabU-Team </b></h1>
+              <h1>Thank you for your message!<b></b></h1>
               <h4>We have sent you an email to the address provided with your message</h4>
-              <h4>We will get in contact with you as soon as possible :)</h4>              
+              <h4>We will get in touch with you as soon as possible!</h4>              
+              <h4>The I Lab U Team :) </h4>
                   <div class="item">
                         <img src="img/mail.png" alt="" height="80" width="80">
                     </div>            

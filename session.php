@@ -73,7 +73,7 @@ if( !empty($_SESSION["email"]))
       <p><h3>We are looking forward seeing you soon!</h3> </p>
       ";
       
-      if($waiting_list == 1) #if is not in the waiting list == 1
+      if($waiting_list == 0) #if is not in the waiting list == 0
       {
           $message .= "
           <div class='content col-lg-12 col-md-12 col-sm-12 clearfix'>      
