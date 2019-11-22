@@ -92,13 +92,13 @@ if(isset($_POST["submit"]))
                                                 //Send email
                                                 $to = $email;
                                                 
-                                                $message = "<h1>ILabU: Speed Date a Scientist</h1>";
+                                                $message = "<h1>I Lab U: Speed Date a Scientist</h1>";
                                                 $message .= "<p>Please reset your password with the following link:</p>";                                                                  
                                                 $message .= "<p><a href='";
                                                 $message .= $mail_conf->getURLResetPassword();
                                                 $message .= "selector=" . $selector . "&validator=". bin2hex($token) ."";
                                                 $message .= "'>Reset password</a></p>";                                                                                                                                        
-                                                $message .= "<p>Regards from the ILabU Team :)</p>";
+                                                $message .= "<p>Regards from the I Lab U Team :)</p>";
                                                                                                 
                                                 $headers = "From: ilabu@erasmusmc.nl";
                                                               
@@ -112,14 +112,14 @@ if(isset($_POST["submit"]))
                                                     $mail->SMTPSecure = $mail_conf->getSMTPSecure();                                  // Enable TLS encryption, `ssl` also accepted
                                                     $mail->Port       = $mail_conf->getPort();                                    // TCP port to connect to                        
                                                     //Recipients                        
-                                                    $mail->setFrom($email, $name);                            
+                                                    $mail->setFrom($mail_conf->getEmail(), 'I Lab U');                            
                                                     $mail->addAddress($email, $name);               // Name is optional                                                                                                    
                                                     #$mail->ClearReplyTos();                                                
-                                                    $mail->addReplyTo($mail_conf->getEmail(), 'Information');
+                                                    $mail->addReplyTo($mail_conf->getEmail());
                                                    
                                                     // Content
                                                     $mail->isHTML(true);                                  // Set email format to HTML
-                                                    $mail->Subject = 'ILabU: Reset Password';
+                                                    $mail->Subject = 'I Lab U: Reset Password';
                                                     $mail->Body    = $message;
                                                     #$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

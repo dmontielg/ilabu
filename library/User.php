@@ -152,6 +152,18 @@
 
 		}                
 
+		function updateAdmin($query)
+		{
+				$sql = "UPDATE $this->table SET																		
+						username = '".$query['username']."',
+						email = '".$query['email']."',
+						verified = '".$query['verified']."'
+						WHERE id_user = '".$query['id_user']."'";				
+					return $this->connection->query($sql) ;
+					
+
+		}                
+
 		function getAll()
 		{
 				$sql = "SELECT * FROM $this->table" ;
@@ -167,6 +179,12 @@
 				return $arrayusers ;
 		}
 
+
+		function getAffectedRows(){
+			return $this->connection->affected_rows;
+		}
+		
+		
 		function getAllByEmail($email)
 		{
 				$sql = "SELECT * FROM $this->table WHERE email = '".$email."'" ;

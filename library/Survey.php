@@ -5,18 +5,20 @@
 	class Survey
 	{
 			private $id_survey		;			
-			private $id_role  	    ;
-			private $id_survey	    ;			
+			private $id_role  	    ;			
 			
 			private $connection  	;
 			private $table  	    ;
 
+			
 		function __construct()
 		{
 				$ob = new Database();
 				$this->connection = $ob->getConnection();
 				$this->table = "survey" ;
 		}
+
+		
 
 		function insert($survey)
 		{
@@ -90,6 +92,24 @@
 				return $array_survey ;
 		}
 
+		function getAllSurveyRole()
+		{
+				$sql = "SELECT survey.id_survey, survey.survey, survey.id_role, role.role 
+				FROM survey, role
+				where survey.id_role = role.id_role
+				" ;
+				$resultado = $this->connection->query($sql) ;
+				$array_survey = array() ;
+				if($resultado->num_rows>0)
+				{
+					while ($row = $resultado->fetch_assoc())
+					{
+						$array_survey[] = $row ;
+					}
+				}
+				return $array_survey ;
+		}
+
 		function getAllJson()
 		{
 			return json_encode($this->getAll(), true);
@@ -108,6 +128,7 @@
 		function getSurvey()
 		{
 			return $this->survey ;
-		}		
+		}	
+		
 	}
 ?>

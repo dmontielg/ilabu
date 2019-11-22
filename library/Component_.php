@@ -13,9 +13,10 @@ class Component_{
                   <meta content="" name="keywords">
                   <meta content="" name="description">
 
-                  <!-- Favicons -->
+                  <!-- Favicons 
                   <link href="../img/favicon.png" rel="icon">
                   <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">                  
+                  -->
 
                   <!-- Google Fonts -->
                   <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
@@ -129,15 +130,14 @@ class Component_{
                       <div class="site-header clearfix">
                         <div class="col-lg-3 col-md-3 col-sm-12 title-area">
                           <div class="site-title" id="title">
-                                  
-                          
+                                                            
                               <div class="logo">
                                     <!-- <center>-->
                                     <a href="index.php" title="logo">              
-                                    <img src="img/ilabu/logo.png" alt="ilabu-logo" />                                                                
+                                    <img src="../img/ilabu/logo.png" alt="ilabu-logo" />                                                                
                                     </a>                                
                                     <a target="_blank" href="https://www.erasmusmc.nl" title="erasmus">              
-                                    <img style="width:44%; float:right;" src="img/ilabu/erasmus_logo.jpg" alt="erasmus-logo" />                                                                
+                                    <img style="width:44%; float:right;" src="../img/ilabu/erasmus_logo.jpg" alt="erasmus-logo" />                                                                
                                     </a>                                
                                     <!--</center>-->
                               </div>                              

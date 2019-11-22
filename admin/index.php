@@ -103,10 +103,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                             </ul>
                             </div>
                         </div>
-                    </div>
-        
-
-        
+                    </div>        
       </div>
     </div>    
   </section>  
@@ -116,7 +113,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
     <section class="section1">    
     <div class="container" >    
             <center>
-                    <h3><?php echo $_SESSION['email']; ?> </h3>            
+                    <h3>Users</h3>            
             </center>
     </div>    
   </section>
@@ -131,17 +128,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                 <button  style="width: 10%; float:center; " type="submit" value="export" name="export-user-response" class="button">Responses</button>
                 <button  style="width: 10%; float:center; " type="submit" value="export" name="export-questions" class="button">Questions</button>
                 <button  style="width: 10%; float:center; " type="submit" value="export" name="export-users" class="button">Users</button>
-                </div>
-                <!--
-                        <div>
-                            
-                        <input  style="width: 25%; float:left; " type="text" class="form-control" placeholder="email" name="email">
-                        <input style="width: 25%; float:left;" type="text" class="form-control" placeholder="status" name="status">
-                        <input style="width: 25%; float:left;" type="text" class="form-control" placeholder="Occupation" name="email">
-                        <input style="width: 25%; float:left;" type="text" class="form-control" placeholder="Event" name="event">
-                        </div>
-                        <button  style="width: 100%; float:left;" type="submit" name="submit-search" class="button">Search</button>
-                -->
+                </div>                
                 </form>
             </div>
 
@@ -155,6 +142,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
               <th>ROLE</th>
               <th>EVENT</th>
               <th>CREATE DATE</th>
+              <th>ACTIONS</th>
             </tr>
           </thead>
           <tbody>
@@ -167,10 +155,15 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                     echo $value["id_user"];
                     echo "</td>";
                     echo "<td>";
+                    
+
                     if($value["waiting_list"] == 1)
                     {echo "YES";}
-                    else
-                    {echo "NO";}                    
+                    elseif($value["waiting_list"] == 0)
+                    {echo "NO";}
+                    
+                    #else
+                    #{echo "NO";}                    
                     echo "</td>";
                     echo "<td>";
                     if($value["verified"] == 1)
@@ -189,6 +182,11 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                     echo "</td>";
                     echo "<td>";
                     echo $value["createdate"];
+                    echo "</td>";
+                    echo "<td>";
+                    
+                    echo "<a href='user_crud.php?update=".$value['id_user']."'>Edit</a>\t\t";
+                    #echo "<a href='user_crud.php?delete=".$value['id_user']."'>Delete</a>";
                     echo "</td>";
                 echo "</tr>";
             endforeach;

@@ -51,6 +51,23 @@
 
 					return 	$this->connection->query($sql) ;
 		}
+
+		function updateAdmin($question)
+		{
+				$sql = "UPDATE $this->table SET
+						id_survey 	        = '". $question['id_survey'] ."',						
+                        question 	        = '". $question['question'] ."',						
+						question_number     = '". $question['question_number'] ."',						
+						response_options 	= '". $question['response_options'] ."',                    
+						type 	            = '". $question['type'] ."',						
+						name_form 	        = '". $question['name_form'] ."'						                                                
+						WHERE id_question   = "  .$question['id_question'] ;				
+					return 	$this->connection->query($sql) ;
+		}
+
+		function getAffectedRows(){
+			return $this->connection->affected_rows;
+		}
                 
                
 		function delete($id_question)
@@ -112,7 +129,8 @@
 		function getAllSorted()
 		{
 				$sql = "SELECT * FROM $this->table
-				order by name_form ASC, id_survey ASC
+				
+				order by id_survey ASC, question_number ASC
 
 				" ;
 				$resultado = $this->connection->query($sql) ;
