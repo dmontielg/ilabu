@@ -26,8 +26,7 @@
 				$dbh->beginTransaction();				
 				/***  INSERT statements ***/
 				#$dbh->prepare($sql);
-
-				$dbh->exec($sql);
+				$dbh->exec($sql);				
 				/*** commit the transaction ***/
 				$dbh->commit();
 				/*** echo a message to say the database was created ***/

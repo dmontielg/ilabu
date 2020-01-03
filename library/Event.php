@@ -104,7 +104,34 @@
 
 		function getAll()
 		{
-				$sql = "SELECT * FROM $this->table" ;
+				$sql = "SELECT * FROM event" ;
+				$resultado = $this->connection->query($sql) ;
+				$arrayevents = array() ;
+				if($resultado->num_rows>0)
+				{
+					while ($row = $resultado->fetch_assoc())
+					{
+						$arrayevents[] = $row ;
+					}
+				}
+				return $arrayevents ;
+		}
+
+		function getAllByUserEvent($id_user)
+		{			
+				$sql = "				
+					SELECT time, id_event, event
+					from event, info_event
+					where event.id_info_event = info_event.id_info_event
+					and id_role = 
+					(SELECT id_role
+					from event
+					where 
+						id_event = 
+						(SELECT id_role FROM user, user_event 
+					where user.id_user = ".$id_user."));					
+					";									
+
 				$resultado = $this->connection->query($sql) ;
 				$arrayevents = array() ;
 				if($resultado->num_rows>0)

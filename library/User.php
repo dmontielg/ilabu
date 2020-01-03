@@ -106,6 +106,28 @@
 			}
 			return $resultado->num_rows ;
 		}
+				
+		function loadByIdEvents($id_user){
+
+			$sql = "				
+					SELECT username, email, verified, id_event, waiting_list, email_confirmation
+					from user, user_event
+					where user.id_user = user_event.id_user										
+					and user.id_user = ".$id_user."
+					LIMIT 1
+					";						
+					$resultado = $this->connection->query($sql) ;
+					$arrayusers = array() ;
+					if($resultado->num_rows>0)
+					{
+						while ($row = $resultado->fetch_assoc())
+						{
+							$arrayusers[] = $row ;
+						}
+					}
+					return $arrayusers ;
+
+		}
 
 		function loadIdByEmail($email)
 		{
@@ -159,9 +181,16 @@
 						email = '".$query['email']."',
 						verified = '".$query['verified']."'
 						WHERE id_user = '".$query['id_user']."'";				
-					return $this->connection->query($sql) ;
-					
-
+					return $this->connection->query($sql) ;					
+		}
+		
+		function updateEventAdmin($query)
+		{
+				$sql = "UPDATE user_event SET																								
+						waiting_list = '".$query['waiting_list']."',
+						id_event = '".$query['id_event']."'
+						WHERE id_user = '".$query['id_user']."'";				
+					return $this->connection->query($sql) ;					
 		}                
 
 		function getAll()
@@ -257,7 +286,8 @@
 		function getAllUsersEventAdmin()
 		{
 			$sql = "						
-			select user.id_user,user_event.waiting_list, email, verified, createdate, role, event from user, user_event, role, event, info_event
+			select user.id_user,user_event.waiting_list, email, verified, createdate, role, event, time
+			from user, user_event, role, event, info_event			
 			where user.id_user = user_event.id_user
 			and user_event.id_event = event.id_event
 			and info_event.id_info_event = event.id_info_event

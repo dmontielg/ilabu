@@ -105,7 +105,7 @@ if( !empty($_SESSION) && !empty($_GET))
                       $myObj->$key = $response;
                     }                                     
           endforeach;                       
-            print_r($myObj);
+              #print_r($myObj);
               $new_array_keys = array();
               foreach($array_keys as $key):$new_array_keys[] = str_replace("_other","",$key);endforeach;
               $array_keys = array_unique($new_array_keys);                                                

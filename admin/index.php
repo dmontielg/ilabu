@@ -99,6 +99,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                             <div class="container clearfix">
                               <ul id="jetmenu_session" class="jetmenu_session blue">
                                     <li><a href="index.php">Users</a></li>
+                                    <li><a href="users_event.php">Users-Events</a></li>
                                     <li><a href="question.php">Questionnaires</a></li>
                             </ul>
                             </div>
@@ -135,12 +136,9 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
       <table class="table table-striped" data-effect="fade">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>WAITING LIST</th>
-              <th>STATUS</th>
-              <th>EMAIL</th>
-              <th>ROLE</th>
-              <th>EVENT</th>
+              <th>ID</th>              
+              <th>VERIFIED</th>
+              <th>EMAIL</th>              
               <th>CREATE DATE</th>
               <th>ACTIONS</th>
             </tr>
@@ -153,33 +151,20 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                 echo "<tr>";
                     echo "<td>";
                     echo $value["id_user"];
-                    echo "</td>";
+                    echo "</td>";                    
                     echo "<td>";
-                    
-
-                    if($value["waiting_list"] == 1)
-                    {echo "YES";}
-                    elseif($value["waiting_list"] == 0)
+                    if($value["verified"] == 0)
                     {echo "NO";}
-                    
-                    #else
-                    #{echo "NO";}                    
-                    echo "</td>";
-                    echo "<td>";
-                    if($value["verified"] == 1)
-                    {echo "ACTIVE";}
+                    elseif($value["verified"] == 1)
+                    {echo "YES";}
                     elseif($value["verified"] == 2)
                     {echo "TERMINATED";}                    
+                    elseif($value["verified"] == 3)
+                    {echo "ADMIN";}                    
                     echo "</td>";
                     echo "<td>";
                     echo $value["email"];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $value["role"];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $value["event"];
-                    echo "</td>";
+                    echo "</td>";                    
                     echo "<td>";
                     echo $value["createdate"];
                     echo "</td>";
