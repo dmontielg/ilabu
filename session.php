@@ -38,6 +38,24 @@ if( !empty($_SESSION["email"]))
     $email_confirmation = $eventResult[0]["email_confirmation"];    
     $waiting_list = $eventResult[0]["waiting_list"];    
 
+    if($event == "The spark between us"){
+      $address = "De Bibliotek, Rotterdam";
+
+    }elseif($event == "Getting closer"){
+      $address = "Library TU Delft, Delft";
+
+    }elseif($event == "Let's talk about life"){
+      $address = "Erasmus MC, Rotterdam";
+      
+    }elseif($event == "Who pays the bill?"){
+      $address = "Erasmus Pavijloen, Rotterdam";
+      
+    }elseif($event == "What' s next?"){
+      $address = "To be confirmed, Delft";
+      
+    }
+
+
     if(empty($event))
     {
       $message .="

@@ -115,19 +115,19 @@ if( !empty($_SESSION) )
                                             -- Select --
                                             </option>                                            
                                             <option value="1">                                              
-                                            1. The Spark Between Us (01/30/2020)
+                                            1. The Spark Between Us (24.01.2020)
                                             </option>
                                             <option value="2">                                              
-                                            2. Getting closer (02/30/2020)
+                                            2. Getting closer (28.02.2020)
                                             </option>
                                             <option value="3">
-                                            3. Let's talk about life (03/30/2020)
+                                            3. Let's talk about life (27.03.2020)
                                             </option>
                                             <option value="4">
-                                            4. Who pays the bill? (04/30/2020)
+                                            4. Who pays the bill? (24.04.2020)
                                             </option>
                                             <option value="5">
-                                            5. What's next? (05/30/2020)
+                                            5. What's next? (29.05.2020)
                                             </option>
                                             
                                       </select>
@@ -195,7 +195,7 @@ if( !empty($_SESSION) )
                     </a>
               </div>
             </div>
-            <h4>Spark between us</h4>
+            <h4>The Spark between us</h4>
             <p>For discussions in topics like <br> electrical engineering, neurobiology, robotics, behavioral and computer sciences.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
           </div>                            
@@ -397,7 +397,7 @@ if( !empty($_SESSION) )
                     </tr>
                     <tr>
                       <th scope="row">Let's talk about life</th>
-                      <td>03.04.2020</td>
+                      <td>27.03.2020</td>
                       <td>Erasmus MC</td>
                       <td>Rotterdam</td>
                     </tr>
