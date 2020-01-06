@@ -119,17 +119,21 @@
 
 		function getAllByUserEvent($id_user)
 		{			
-				$sql = "				
-					SELECT time, id_event, event
-					from event, info_event
+				$sql = "										
+				SELECT id_event, event, id_role, time
+				FROM event, info_event
+				WHERe event.id_info_event = info_event.id_info_event
+				AND id_role = 
+				(SELECT id_role
+				from event, info_event
 					where event.id_info_event = info_event.id_info_event
-					and id_role = 
-						(SELECT id_role
+					and id_event = 
+						(SELECT id_event
 						from event
 						where 
 							id_event = 
-							(SELECT id_role FROM user, user_event 
-						where user.id_user = ".$id_user."));					
+							(SELECT id_event FROM user, user_event 
+						where user.id_user = ".$id_user.")));							
 					";									
 
 				$resultado = $this->connection->query($sql) ;
