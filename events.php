@@ -115,7 +115,7 @@ if( !empty($_SESSION) )
                                             -- Select --
                                             </option>                                            
                                             <option value="1">                                              
-                                            1. The Spark Between Us (24.01.2020)
+                                            1. The spark Between Us (24.01.2020)
                                             </option>
                                             <option value="2">                                              
                                             2. Getting closer (28.02.2020)
@@ -195,7 +195,7 @@ if( !empty($_SESSION) )
                     </a>
               </div>
             </div>
-            <h4>The Spark between us</h4>
+            <h4>The spark between us</h4>
             <p>For discussions in topics like <br> electrical engineering, neurobiology, robotics, behavioral and computer sciences.</p>
             <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
           </div>                            
@@ -378,6 +378,7 @@ if( !empty($_SESSION) )
                     <tr>      
                       <th scope="col">Event</th>
                       <th scope="col">Date</th>
+                      <th scope="col">Time</th>
                       <th scope="col">Venue</th>
                       <th scope="col">City</th>
                     </tr>
@@ -386,31 +387,36 @@ if( !empty($_SESSION) )
                     <tr>
                       <th scope="row">The Spark between us</th>      
                       <td>24.01.2020</td>
+                      <td>18:00</td>
                       <td>De Bibliotek</td>
                       <td>Rotterdam</td>
                     </tr>
                     <tr>
                       <th scope="row">Getting closer</th>      
                       <td>28.02.2020</td>
+                      <td>18:00</td>
                       <td>Library TU Delft</td>
                       <td>Delft</td>
                     </tr>
                     <tr>
                       <th scope="row">Let's talk about life</th>
                       <td>27.03.2020</td>
+                      <td>18:00</td>
                       <td>Erasmus MC</td>
                       <td>Rotterdam</td>
                     </tr>
                     <tr>
                       <th scope="row">Who pays the bill?</th>
                       <td>24.04.2020</td>
+                      <td>18:00</td>
                       <td>Erasmus Pavijloen</td>
                       <td>Rotterdam</td>
                     </tr>
                     <tr>
                       <th scope="row">What's next?</th>
                       <td>29.05.2020</td>
-                      <td>To be confirmed</td>
+                      <td>18:00</td>
+                      <td>Prinsenkwartier</td>
                       <td>Delft</td>
                     </tr>    
                   </tbody>

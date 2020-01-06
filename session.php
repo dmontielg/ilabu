@@ -51,8 +51,7 @@ if( !empty($_SESSION["email"]))
       $address = "Erasmus Pavijloen, Rotterdam";
       
     }elseif($event == "What' s next?"){
-      $address = "To be confirmed, Delft";
-      
+      $address = "To be confirmed, Delft";      
     }
 
 

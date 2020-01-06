@@ -124,12 +124,12 @@
 					from event, info_event
 					where event.id_info_event = info_event.id_info_event
 					and id_role = 
-					(SELECT id_role
-					from event
-					where 
-						id_event = 
-						(SELECT id_role FROM user, user_event 
-					where user.id_user = ".$id_user."));					
+						(SELECT id_role
+						from event
+						where 
+							id_event = 
+							(SELECT id_role FROM user, user_event 
+						where user.id_user = ".$id_user."));					
 					";									
 
 				$resultado = $this->connection->query($sql) ;
