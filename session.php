@@ -117,7 +117,7 @@ if( !empty($_SESSION["email"]))
                           {                              
                             $message_for_email ="<p>Event: ".$event."</p><p>Session: ".$session_number."</p><p>Address: ".$address."</p><p>Time: ".$time."</p><p>Date: ".$date."</p>
                             <p>
-                            <small>If you want to log in to your I Lab U account, please follow this link: https://ilabu.erasmusmc.nl/login </small>
+                            <small>If you want to log in to your I Lab U account, please follow this link: https://ilabu.erasmusmc.nl/login.php </small>
                             <small>In case you have any question or want to change the event you are register please send us an email to ilabu@erasmusmc.nl </small>
                             </p>
                             <h3>We are looking forward to meeting you in person!</h3>                    
