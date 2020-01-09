@@ -117,6 +117,21 @@
 				return $arrayevents ;
 		}
 
+		function executeSQL($sql)
+		{
+
+			$resultado = $this->connection->query($sql) ;
+			$arrayevents = array() ;
+			if($resultado->num_rows>0)
+			{
+				while ($row = $resultado->fetch_assoc())
+				{
+					$arrayevents[] = $row ;
+				}
+			}
+			return $arrayevents ;
+		}
+
 		function getAllByUserEvent($id_user)
 		{			
 				$sql = "										

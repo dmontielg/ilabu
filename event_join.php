@@ -1,6 +1,9 @@
+
+
 <?php
 session_start() ;
 
+$error = 0;
 if( !empty($_SESSION) && !empty($_GET))
 {        
     #print_r($_GET);
@@ -77,7 +80,8 @@ if( !empty($_SESSION) && !empty($_GET))
           endforeach;
           //foreach($new_opt_radio as $r): echo $r; echo "<br/>"; endforeach;
           #print_r($_POST);                    
-          $error = "";
+          #$error = "";
+          $error = 0;
           #$error .= "Please fill the following questions to proceed:<br/>";
           $myObj = NULL;      
           $array_keys = array();  
@@ -118,8 +122,9 @@ if( !empty($_SESSION) && !empty($_GET))
               ## removes submit button as an element from the array
               if (($key = array_search('submit', $array_keys)) !== false){ unset($array_keys[$key]); }                
               
-              if(count($array_keys) == count($array_json))
-              {                
+              
+              //if(count($array_keys) == count($array_json))
+              //{                
                   #echo "<h1>Success! we are going to stored this form now!</h1>";
                   ## Add in case there is a date in the questionaire and store it                                                                        
                   #$myJSON = json_encode($myObj);   
@@ -168,23 +173,32 @@ if( !empty($_SESSION) && !empty($_GET))
                     }
                     else
                     {
-                      $error .= "Sorry!, Something went wrong :( please fill the form again.<br/>";                    
-                      $error = "<div class='alert alert-danger' role='alert'>".$error."</div>";       
+                      #$error .= "Sorry!, Something went wrong :( please fill the form again.<br/>";                    
+                      #$error = "<div class='alert alert-danger' role='alert'>".$error."</div>";       
+                      $error = 1;
                     }                         
-              }
-                /// here shows a message error of which questions are missing
-              else
-              {                                                
+              
+              /*
+              }               
+              
+              else              
+              {    /// here shows a message error of which questions are missing                                                                             
+                $error = 1;
+              
                 $error .= "Please fill the following questions to proceed:<br/>";
                 foreach(array_diff($array_keys, $array_json) as $key):
                   $error  .= $key;
-                  $error  .= "<br/>";              
+                  $error  .= "\n";              
                 endforeach;
-                $error = "<div class='alert alert-danger' role='alert'>".$error."</div>";                
-              }                                                        
+
+                #echo "<script> alert('Sorry!".$error."'); </script>";                                                                                          
+              
+              }        
+              
+              */
         #}
       }
-echo $error;
+//echo $error ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -193,6 +207,8 @@ echo $error;
 <body>
 <?php $component->getTopBar(); ?>
 <?php $component->getHeader(basename($_SERVER['PHP_SELF'])); ?>
+
+
 
 <!-- Content Starts here -->
   <section class="post-wrapper-top">    
@@ -216,13 +232,7 @@ echo $error;
                                         </div>
                                 </form>                       
                         </div>
-                    </div>
-
-                  
-                  
-                  
-
-                
+                    </div>                
           </div>
       </div>
     </div>

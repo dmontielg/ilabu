@@ -66,6 +66,7 @@ class Component_{
                 <script src="../lib/jigowatt/jigowatt.js"></script>
                 <script src="../lib/easypiechart/easypiechart.min.js"></script>
 
+                
                 <!-- Template Main Javascript File -->
                 <script src="../js/main.js"></script>
 

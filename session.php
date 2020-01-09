@@ -30,6 +30,7 @@ if( !empty($_SESSION["email"]))
     if($role->getRole() == "scientist"){$user_role = "Scientist"; }else{ $user_role = "User";}
 
     $event = $eventResult[0]["event"];
+    $id_event = $eventResult[0]["id_event"];
     $session_number = $eventResult[0]["session_number"];
     $address = $eventResult[0]["address"];
     $time = $eventResult[0]["time"];
@@ -39,21 +40,24 @@ if( !empty($_SESSION["email"]))
     $waiting_list = $eventResult[0]["waiting_list"];    
 
     if($event == "The spark between us"){
-      $address = "De Bibliotek, Rotterdam";
+      $address = "Theaterfoyer, De Biblioteek\nHoogstraat 110, 3011 PV Rotterdam ";
 
     }elseif($event == "Getting closer"){
-      $address = "Library TU Delft, Delft";
+      
+      $address = "Orange room, TU Delft Library\nPrometheusplein 1, 2628 ZC Delft";
 
     }elseif($event == "Let's talk about life"){
-      $address = "Erasmus MC, Rotterdam";
+      
+      $address = "Centraal-SP-2407, Erasmus University Medical Center\nDoctor Molewaterplein 40, 3015 GD Rotterdam";
       
     }elseif($event == "Who pays the bill?"){
-      $address = "Erasmus Pavijloen, Rotterdam";
+      
+      $address = "Serre, Erasmus Paviljoen\nBurgemeester Oudlaan 350, 3062 PA Rotterdam";
       
     }elseif($event == "What' s next?"){
-      $address = "To be confirmed, Delft";      
+      $address = "Podiumzaal, Prinsenkwartier\nSint Agathaplein 4, 2611 HR Delft";      
     }
-
+    
 
     if(empty($event))
     {
@@ -113,7 +117,7 @@ if( !empty($_SESSION["email"]))
                           {                              
                             $message_for_email ="<p>Event: ".$event."</p><p>Session: ".$session_number."</p><p>Address: ".$address."</p><p>Time: ".$time."</p><p>Date: ".$date."</p>
                             <p>
-                            <small>If you want to log in to your I Lab U account, please follow this link: www.ilabu.erasmusmc.nl/login </small>
+                            <small>If you want to log in to your I Lab U account, please follow this link: https://ilabu.erasmusmc.nl/login </small>
                             <small>In case you have any question or want to change the event you are register please send us an email to ilabu@erasmusmc.nl </small>
                             </p>
                             <h3>We are looking forward to meeting you in person!</h3>                    
@@ -144,7 +148,7 @@ if( !empty($_SESSION["email"]))
                                 $mail_message .= "<h3>Thank you for your interest in our event and for filling in the registration. We will confirm your participation as soon as possible.</h3>";
                                 $mail_message .= "<h3>Here is a summary of the event: </h3>";
                                 $mail_message .= "<br/>";                           
-                                $mail_message .= '<p>Message: '.$message_for_email.'</p>';    
+                                $mail_message .= '<p>'.$message_for_email.'</p>';    
                                 $mail_message .= "<br/>";                           
                                 $mail_message .= "<br/>";               
                                 

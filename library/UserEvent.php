@@ -143,7 +143,7 @@
 		function getEventByIdUser($id_user)
 		{			
 			$sql = "								
-			SELECT  info_event.event, info_event.description, info_event.code, 
+			SELECT  event.id_event, info_event.event, info_event.description, info_event.code, 
 			event.address, event.time, event.date, event.session_number,
 			event.id_info_event, event.id_role, user_event.email_confirmation, user_event.waiting_list
 			FROM event, user_event, info_event
