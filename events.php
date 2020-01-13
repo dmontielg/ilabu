@@ -145,7 +145,7 @@ if( !empty($_SESSION) )
                                                     <input type="radio" value="1" name="public_session">Session 1 (17:30)
                                                     <input type="radio" value="2" name="public_session">Session 2 (20:30)                                                    
                                                     -->
-                                                    <input type="radio" value="1" name="session_number">Session 1 (17:30)
+                                                    <input type="radio" value="1" name="session_number">Session 1 (18:00)
                                                     <input type="radio" value="2" name="session_number">Session 2 (20:30)
                                               </div>
                                               <div id="div2">  
@@ -154,7 +154,7 @@ if( !empty($_SESSION) )
                                                     <!--
                                                       <input type="radio" value="1" name="scientist_session">Session 1 (17:30) *only one option                                                      
                                                     -->
-                                                    <input type="radio" value="1" name="session_number">Session 1 (17:30) *only one option
+                                                    <input type="radio" value="1" name="session_number">Session 1 (18:00) *only one option
                                               </div>
                                               <br/>
                                         <button type="submit" name="submit" class="button"> Submit </button>
