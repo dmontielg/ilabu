@@ -148,7 +148,9 @@
 						where 
 							id_event = 
 							(SELECT id_event FROM user, user_event 
-						where user.id_user = ".$id_user.")));							
+						where user.id_user = ".$id_user."
+						and user_event.id_user = ".$id_user."
+					)));							
 					";									
 
 				$resultado = $this->connection->query($sql) ;

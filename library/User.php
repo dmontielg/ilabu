@@ -186,10 +186,19 @@
 		
 		function updateEventAdmin($query)
 		{
-				$sql = "UPDATE user_event SET																								
+				
+				if($query["id_event"] == "NA"){
+					$sql = "UPDATE user_event SET																								
+					waiting_list = '".$query['waiting_list']."'				
+					WHERE id_user = '".$query['id_user']."'";					
+
+				}else{
+					$sql = "UPDATE user_event SET																								
 						waiting_list = '".$query['waiting_list']."',
 						id_event = '".$query['id_event']."'
 						WHERE id_user = '".$query['id_user']."'";				
+					}
+				print($sql);
 					return $this->connection->query($sql) ;					
 		}                
 
