@@ -8,13 +8,12 @@ session_start();
         include_once '../library/Response.php';              
         include_once '../library/Transaction.php';              
         
-        $transaction = new Transaction()  ;
-        $user_event = new UserEvent()     ;
-        $question = new Question()        ;
-        $component = new Component_()     ;
-        $response_ = new Response()       ;
-        $user = new User()                ;
-
+        $transaction  = new Transaction() ;
+        $user_event   = new UserEvent()   ;
+        $question     = new Question()    ;
+        $component    = new Component_()  ;
+        $response_    = new Response()    ;
+        $user         = new User()        ;
 
   if(isset($_POST["submit_event"]))
   {
@@ -46,10 +45,10 @@ if($_SESSION["status"] == 1)
         $date = $eventResult[0]["date"];
         $code = $eventResult[0]["code"];
 
-        $resultIdDates = $question->getAllIdDates($id_user);        
-        $array_id_user = "";
+        $resultIdDates = $question->getAllIdDates($id_user);                
+        $array_id_user = "";                        
         
-        if(count($resultIdDates) > 0)
+        if(count($resultIdDates) > 0) ##in case there are some info added if not shows all in the else
         {
             foreach($resultIdDates  as $value):               
               $array_id_user .= $value["username_date"]; 
@@ -268,6 +267,7 @@ if($_SESSION["status"] == 1)
                                 <select name="username_date" >
                                 <option value="">--- Select Date --- </option>
                                   <?php
+                                  
                                     foreach ($resultDateNames as $elemento):
                                   ?>
                                 <option value="<?php echo $elemento['id_user']; ?>" 

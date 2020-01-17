@@ -176,11 +176,11 @@
 			$sql = "			
 			SELECT user.* FROM event, user_event, user
 			where user_event.id_event = event.id_event
-			and user_event.waiting_list = 1
+			and user_event.waiting_list = 0
 			and event.id_role != ".$id_role."
 			and event.id_info_event = ".$id_info_event."
 			and user_event.id_user = user.id_user" ;
-			
+			#print($sql);
 			$resultado = $this->connection->query($sql) ;
 			$arrayquestionaire = array() ;
 			
@@ -195,11 +195,12 @@
 		}
 
 		function getAllIdDates($id_user)
-		{			
+		{						
 			$sql = "
 			SELECT distinct username_date FROM ilabu.response where id_user = ".$id_user."
 			and username_date != 'NA'
 			";					
+			#print($sql);
 			$resultado = $this->connection->query($sql) ;
 			$arrayquestionaire = array() ;
 			
@@ -217,7 +218,7 @@
 		{
 			$sql = "SELECT user.* FROM event, user_event, user
 			where user_event.id_event = event.id_event
-			and user_event.waiting_list = 1
+			and user_event.waiting_list = 0
 			and event.id_role != ".$id_role."
 			and event.id_info_event = ".$id_info_event."
 			and user_event.id_user = user.id_user

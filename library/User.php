@@ -198,7 +198,7 @@
 						id_event = '".$query['id_event']."'
 						WHERE id_user = '".$query['id_user']."'";				
 					}
-				print($sql);
+				
 					return $this->connection->query($sql) ;					
 		}                
 
