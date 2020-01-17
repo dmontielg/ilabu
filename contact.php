@@ -143,9 +143,9 @@ if(isset($_POST["submit"]))
 
         <div class="col-lg-6 col-md-6 col-sm-6">
           <h4 class="title">Contact us</h4>
-          <p>Do you have a burning question or a suggestion for us?</p>
+          <p>Do you have a burning question or suggestion for us?</p>
           <p>Please use this form to let us know. We will get back to you as soon as we can.</p>
-          <p>You can also contact us via our social media: <a href="#">Instagram</a>, <a href="#">LinkedIn</a>, <a href="#">Facebook</a>.</p>                    
+          <p>You can also contact us via our social media: <a target="_blank" href="https://www.facebook.com/ilabuNL">Facebook</a> and <a target="_blank" href="https://www.instagram.com/ilabu_nl/?hl=nl">Instagram</a></p>                    
           <!-- contact_details -->
         </div>
 

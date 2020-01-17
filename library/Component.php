@@ -115,9 +115,11 @@ class Component{
                     <div class="container">
                       <div class="col-lg-12 text-right">
                         <div class="social_buttons">
-                          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-                          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>                                                    
-                          <a href="#" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>                          
+                        
+<!--
+                          <a href="https://www.facebook.com/ilabuNL" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                          <a href="https://www.instagram.com/ilabu_nl/?hl=nl" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>                                                    
+  -->                      
                         </div>
                       </div>
                     </div>

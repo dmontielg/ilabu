@@ -111,7 +111,7 @@
       <img src="img/staff/lucy.jpg" alt="ben" style="width:10%">
         <h2>Lucie Kulhankova</h2>                
         <p>
-        Lucie is PhD student, working on analyzing mixed DNA samples. She takes care of communication and social media. She became passionate about science communication during her time in the iGEM competition. In her personal live she loves a good novel, tea, and all the podcasts you can find.
+        Lucie is PhD student, working on analyzing mixed DNA samples. She takes care of communication and social media. She became passionate about science communication during her time in the iGEM competition. In her personal life she loves a good novel, tea, and all the podcasts you can find.
         </p>        
       </div>
     </div>

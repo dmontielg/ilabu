@@ -15,19 +15,20 @@ if(isset($_GET["vkey"]))
             if($verify){              
               $message = '
               <h3>Thank you for registering in <b> I Lab U </b></h3>
-              <h4>Your account is now activated!</h4>
+              <h4>Your account is now verified!</h4>
               <p>          
-              <h5>Please, <a href="login.php">login</a> to join one of our events! </h5>
+              <h5>Now, please <a href="login.php">login</a> and join one of our events! Registration is mandatory so that we know you are coming! </h5>
               </p>                      
                   <div class="item">
                         <img src="img/success-icon.jpg" alt="" height="80" width="80">                        
                   </div>  ';          
             }else{              
               $message = '
-              <h3>Sorry, something went wrong :( <b> ILabU </b></h3>
+              <h3>We are sorry, something went wrong :( <b> ILabU </b></h3>
               <h4>Your account is not activated yet!</h4>
               <p>          
-              <h5>Please try to open the link again from your mailbox</h5>
+              <h5>Please try to open the link again from your mailbox, and 
+              if you are still experiencing problems loggin in, please send us a <a href="contact.php"> message! </h5>
               </p>                      
                   <div class="item">                        
                         <img src="img/icon_failure.png" alt="" height="80" width="80">
@@ -37,9 +38,9 @@ if(isset($_GET["vkey"]))
     else
     {      
       $message = '
-              <h3>Sorry, this account is invalid or already verified! <b> ILabU </b></h3>              
+              <h3>Sorry, this account is invalid or already verified!</h3>              
               <p>          
-              <h5>If you have problem loggin in, please send us a <a href="contact.php"> message!</a> :)</h5>
+              <h5>If you experience problems loggin in, please send us a <a href="contact.php"> message!</a> :)</h5>
               </p>                      
                   <div class="item">                        
                         <img src="img/question-icon.png" alt="" height="80" width="80">

@@ -63,10 +63,11 @@ if( !empty($_SESSION["email"]))
     {
       $message .="
       <p>          
-      Thanks for registering to ILabU! 
-      You now can join to an event and session! Please choose the <a href='events.php'>event</a> you like the most!.
+      
+      Thanks for registering to I Lab U! 
+      You can now join one of our events that you like the most <a href='events.php'>here</a> and fill in your details before you attend.
       </p>
-      <p><h3>We are looking forward seeing you soon!</h3> </p>
+      <p><h4>We are looking forward to seeing you soon!</h4> </p>
       ";
     
     }
@@ -74,7 +75,7 @@ if( !empty($_SESSION["email"]))
     {
       $message .="      
       <p>          
-      Thanks for participate in ILabU! You are already registered to an event and a session! Please see the info below.
+      Thanks for participating in I Lab U! You have already joined an event and a session! Please see the informaion below so you know where and how to find us!
       </p>
       <p>
       Event: ".$event."
@@ -91,7 +92,7 @@ if( !empty($_SESSION["email"]))
       <p>
       Date: ".$date."
       </p>
-      <p><h3>We are looking forward seeing you soon!</h3> </p>
+      <p><h4>We are looking forward to seeing you soon!</h3> </p>
       ";
       
       if($waiting_list == 0) #if is not in the waiting list == 0
@@ -106,7 +107,7 @@ if( !empty($_SESSION["email"]))
                 </div>            
                 <button name='submit' type='submit' class='btn btn-large btn-primary'>Send Code</button>                        
               </form>
-              <p><small>In case you have any question or want to change the event you are register please send us an email to ilabu@erasmusmc.nl </small></p>
+              <p><small>In case you have any question or want to change the event you have joined, please send us an email to ilabu@erasmusmc.nl </small></p>
           </div>      
           ";
       }
@@ -118,7 +119,7 @@ if( !empty($_SESSION["email"]))
                             $message_for_email ="<p>Event: ".$event."</p><p>Session: ".$session_number."</p><p>Address: ".$address."</p><p>Time: ".$time."</p><p>Date: ".$date."</p>
                             <p>
                             <small>If you want to log in to your I Lab U account, please follow this link: https://ilabu.erasmusmc.nl/login.php </small>
-                            <small>In case you have any question or want to change the event you are register please send us an email to ilabu@erasmusmc.nl </small>
+                            <small>In case you have any question or want to change the event you have joined, please send us an email to ilabu@erasmusmc.nl </small>
                             </p>
                             <h3>We are looking forward to meeting you in person!</h3>                    
                             </div>";
@@ -142,17 +143,17 @@ if( !empty($_SESSION["email"]))
 
                                 // Content
                                 $mail->isHTML(true);                                  // Set email format to HTML
-                                $mail->Subject = 'Thank you for your registration to the I Lab U event!';                                                                
+                                $mail->Subject = 'Thank you for joining an I Lab U event!';                                                                
                                 #$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-                                $mail_message = "<h1> ILabU: Speed date a Scientist </h1>";                        
+                                $mail_message = "<h1> I Lab U: Speed date a Scientist </h1>";                        
                                 $mail_message .= "<h3>Thank you for your interest in our event and for filling in the registration. We will confirm your participation as soon as possible.</h3>";
-                                $mail_message .= "<h3>Here is a summary of the event: </h3>";
+                                $mail_message .= "<h3>Here is a summary of your event: </h3>";
                                 $mail_message .= "<br/>";                           
                                 $mail_message .= '<p>'.$message_for_email.'</p>';    
                                 $mail_message .= "<br/>";                           
                                 $mail_message .= "<br/>";               
                                 
-                                $mail_message .= '<p><br/>The ILabU Team</p>';            
+                                $mail_message .= '<p><br/>The I Lab U Team</p>';            
                                 $mail->Body   = $mail_message;                        
                                 $mail->send();                                   
                                 $user_event->updateEmailConfirmationbyIdUser($id_user);
@@ -209,12 +210,11 @@ if( !empty($_SESSION["email"]))
 
     <section class="section1">
     <div class="container" >
-      <h1>The I Lab u Project</h1>
-      <h4>Welcome <?php echo $user->getEmail(); ?></h4>
+      <h4> <?php echo $user->getEmail(); ?></h4>
 
       <?php echo $message;?>
      
-      <p>-Because everybody is looking for someone to lab.</p>
+      <p>...because everybody is looking for someone to lab!</p>
     </div>    
   </section>            
       <!-- end content -->

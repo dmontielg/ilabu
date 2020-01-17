@@ -91,9 +91,9 @@ if(isset($_POST['submit']))
                     	<span>Welcome Back!</span>
                     </h4>
             <p>We are happy to see you here again! Feel free to check your event profile or if you wish, change your registration
-            just send us an email <a href="mailto:ilabu@erasmusmc.nl">ilabu@erasmusmc.nl.</a></p>
-            <p >Still not registered? You can <a href="register.php">register</a> here!</p>    
-            <p >Do you have any question for us? You can <a href="contact.php">contact us</a> here!</p>
+            by sending us an email at <a href="mailto:ilabu@erasmusmc.nl">ilabu@erasmusmc.nl.</a></p>
+            <p >Still not registered? You can register <a href="register.php">here.</a></p>    
+            <p >Do you have any question for us? You can contact us <a href="contact.php">here.</a></p>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
           <h4 class="title">

@@ -72,7 +72,7 @@ if(isset($_POST["submit"]))
                                                 //Send email
                                                 $to = $email;
                                                 $message = "<h1>I Lab U: Speed Date a Scientist</h1>";
-                                                $message .= "<p>Please confirm your account by clicking the following link:</p>";                                                                  
+                                                $message .= "<p>Please confirm your account in order to be able to register for one of our events by clicking the following link:</p>";                                                                  
                                                 $message .= "<p><a href='";
                                                 $message .= $mail_conf->getURLRegister();
                                                 $message .= $vkey."'>Register Account</a></p>";                                                                                                
@@ -109,7 +109,7 @@ if(isset($_POST["submit"]))
                                                     #header('location:thankyou.php?flag=TRUE');
                                                     $error ="<h4>Thank you for registering in our I Lab U platform!</h4>
                                                     
-                                                    </b><br/><h4>Please check your e-mail to verify your account.</h4>";
+                                                    </b><br/><h4>Please check your e-mail (...and your Spam!) to verify your account, and come back here to choose and register for your favourite event!</h4>";
 
                                                 } catch (Exception $e) {
                                                     $error = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
@@ -175,8 +175,11 @@ if(isset($_POST["submit"]))
                     	<span>Join Us!</span>
                     </h4>                          
           <p>We are happy that you want to be part of I Lab U!</p>
-          <p>How does it work? You fill in this quick registration and then you can choose your favourite event either as scientist or public. </p>
-          <p>We ask you to fill in a few questions, so we know a little more about you and your views in science. As simple as that!</p>          
+          <p>How does it work? You fill in this quick registration and then you can choose your favourite event by either as scientist or public. </p>
+          <p>We ask you to fill in a few questions, so we know a little more about you and your views in science. As simple as that! But, 
+          please do that before you come to our event!          
+          </p>
+          
           <p>If you have a question for us let us know <a href="contact.php">here</a>.</p>
           </div>     
         <!--

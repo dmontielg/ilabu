@@ -94,7 +94,7 @@ if( !empty($_SESSION) )
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">JOIN TO AN EVENT!</h4>
+                                <h4 class="modal-title">Join an event!</h4>
                               </div>
                               <div class="modal-body">
                                   <div class="container">
@@ -108,7 +108,7 @@ if( !empty($_SESSION) )
 
 
                                       <form method="post" action="">                                                                                          
-                                      <label>Please, select the event you want to join</label>
+                                      <label>Select the event you want to join</label>
                                       <br/>
                                       <select name="id_info_event">
                                             <option value="NA">                                              
@@ -132,29 +132,30 @@ if( !empty($_SESSION) )
                                             
                                       </select>
                                       <br/>
-                                      <label>Join as a Scientist? </label>   
+                                      <label>Joining as a scientist? </label>   
                                       <br/>         
                                       <input type="hidden" name="questionaire" value="Registration">                                                                                                              
                                       <input type="radio" name="id_role" value="1" id="opt_no" >No
                                       <input type="radio" name="id_role" value="2" id="opt_yes">Yes                                                                                
                                         <br/>
                                               <div id="div1">  
-                                                <label>Please, select the session you want to join</label>
+                                                <label>Now, select the session you want to join</label>
                                                     <br/>
                                                     <!-- 
                                                     <input type="radio" value="1" name="public_session">Session 1 (17:30)
                                                     <input type="radio" value="2" name="public_session">Session 2 (20:30)                                                    
                                                     -->
-                                                    <input type="radio" value="1" name="session_number">Session 1 (18:00)
-                                                    <input type="radio" value="2" name="session_number">Session 2 (20:30)
+                                                    <input type="radio" value="1" name="session_number">Session 1 (18:00-19:15)
+                                                    <br/>
+                                                    <input type="radio" value="2" name="session_number">Session 2 (20:30-21:45)
                                               </div>
                                               <div id="div2">  
-                                              <label>Please, select the session you want to join</label>
+                                              <label>Now, select the session you want to join</label>
                                                     <br/>
                                                     <!--
                                                       <input type="radio" value="1" name="scientist_session">Session 1 (17:30) *only one option                                                      
                                                     -->
-                                                    <input type="radio" value="1" name="session_number">Session 1 (18:00) *only one option
+                                                    <input type="radio" value="1" name="session_number">Session (18:00-21:45) *only option
                                               </div>
                                               <br/>
                                         <button type="submit" name="submit" class="button"> Submit </button>
@@ -168,7 +169,7 @@ if( !empty($_SESSION) )
                           </div>
                         </div>                      
                         <div class="general-title text-center">
-                          <h3>Join to our events!</h3>                          
+                          <h3>Join our events!</h3>                          
                         </div>                             
     <div class="container clearfix">
                         <center>
@@ -385,10 +386,10 @@ if( !empty($_SESSION) )
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">The Spark between us</th>      
+                      <th scope="row">The spark between us</th>      
                       <td>24.01.2020</td>
                       <td>18:00</td>
-                      <td>De Bibliotek</td>
+                      <td>De Biblioteek</td>
                       <td>Rotterdam</td>
                     </tr>
                     <tr>
