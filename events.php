@@ -114,9 +114,11 @@ if( !empty($_SESSION) )
                                             <option value="NA">                                              
                                             -- Select --
                                             </option>                                            
+                                            <!--
                                             <option value="1">                                              
                                             1. The spark Between Us (24.01.2020)
                                             </option>
+                                            -->
                                             <option value="2">                                              
                                             2. Getting closer (28.02.2020)
                                             </option>
@@ -198,7 +200,14 @@ if( !empty($_SESSION) )
             </div>
             <h4>The spark between us</h4>
             <p>For discussions in topics like <br> electrical engineering, neurobiology, robotics, behavioral and computer sciences.</p>
-            <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
+            <?php 
+            /*
+            if( !empty($_SESSION["email"]))
+            {
+              echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';
+            }
+            */
+            ?>            
           </div>                            
         </div>             
         <!-- end dmbox -->
