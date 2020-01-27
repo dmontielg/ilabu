@@ -201,12 +201,7 @@ if( !empty($_SESSION) )
             <h4>The spark between us</h4>
             <p>For discussions in topics like <br> electrical engineering, neurobiology, robotics, behavioral and computer sciences.</p>
             <?php 
-            /*
-            if( !empty($_SESSION["email"]))
-            {
-              echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';
-            }
-            */
+            #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}
             ?>            
           </div>                            
         </div>             
