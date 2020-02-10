@@ -4,6 +4,60 @@
 * Author: TemplateMag.com
 * License: https://templatemag.com/license/
 */
+.gallery-section{
+  
+  width: 50%;
+  margin: 0 auto;
+  top: 20%;
+  
+  padding-left: 5px;
+  padding-right: 5px;  
+  padding: 30px 0;
+  
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+ 
+  span {
+    display:none;
+}
+
+
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #53b4d1;}
+  
+
 
 * {
   margin: 0;
@@ -17,7 +71,8 @@ body {
   margin: 0;
   height: 100%;
   z-index: 1000;
-  color: #696E74;
+  color: #696E74;  
+  
 }
 
 h1, h2, h3, h4, h5, h6 {

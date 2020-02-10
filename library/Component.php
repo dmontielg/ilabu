@@ -40,7 +40,10 @@ class Component{
                   <link rel="stylesheet" href="css/colors/blue.css">                  
                   <link href="css/bbpress.css" rel="stylesheet">
 
-
+                  <link href="css/lightgallery.css" rel="stylesheet">               
+                  <link href="css/gallery-ilabu.css" rel="stylesheet">
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+           
                   <!-- =======================================================
                     Template Name: MaxiBiz
                     Template URL: https://templatemag.com/maxibiz-bootstrap-business-template/
@@ -161,6 +164,21 @@ class Component{
                               <ul id="jetmenu" class="jetmenu blue">';
                 
                               
+                    
+                    
+                    /*
+                    $menu .= '
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Gallery</button>
+                        <div class="dropdown-content">
+                            <a href="gallery_spark.php">Spark between us</a>
+                            <a href="#">Getting closer</a>                            
+                        </div>
+                        </div>
+                    '; 
+                    */
+                    
                     if(strpos($pageName, 'index') !== false){ $menu .= '<li class="active"><a href="index.php">Home</a></li>'; }
                     else{ $menu .= '<li><a href="index.php">Home</a></li>'; }
 
@@ -172,6 +190,31 @@ class Component{
 
                     if(strpos($pageName, 'events') !== false){ $menu .= '<li class="active"><a href="events.php">Events</a></li>'; }
                     else{ $menu .= '<li><a href="events.php">Events</a></li>'; }                    
+
+                    if(strpos($pageName, 'photos') !== false){ 
+                      $menu .= '
+                      <li class="active"><a href="#">Photos</a>
+                      <ul class="dropdown">
+                        <li><a href="spark_photos.php">The spark between us</a></li>                        
+                      </ul>
+                    </li>
+                    ';
+
+                     }else{
+
+                      $menu .= '
+                      <li><a href="#">Photos</a>
+                      <ul class="dropdown">
+                        <li><a href="spark_photos.php">The spark between us</a></li>                        
+                      </ul>
+                    </li>';
+
+                     }
+                    
+                     /*<li><a href="#">Getting closer</a></li>
+                        <li><a href="#">Lets talk about life</a></li>
+                        <li><a href="#">Who pays the bill?</a></li>
+                        <li><a href="#">Whats next?</a></li> */
 
                     if(strpos($pageName, 'register') !== false){ $menu .= '<li class="active"><a href="register.php">Register</a></li>'; }
                     else{ $menu .= '<li><a href="register.php">Register</a></li>'; }

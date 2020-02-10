@@ -150,7 +150,7 @@ if(isset($_POST["submit"]))
     <div class="container">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li>Register</li>
         </ul>
         <h2>REGISTER</h2>
