@@ -19,6 +19,7 @@ session_start();
        function exportCSV($query, $header, $filename)
        {
             header('Content-Type: text/csv; charset=utf-8');  
+            #header("Content-Type: application/vnd.ms-excel");
             #header('Content-Disposition: attachment; filename=$filename');  
             header('Content-Disposition: attachment; filename='.$filename);  
             $output = fopen("php://output", "w");  
@@ -33,14 +34,16 @@ session_start();
        
 
 if($_SESSION["verified"] == 3) ## 3 is for admin account
-{                                              
+{                          
+        $format = ".csv";
+
         if($_POST["export-user-event"] == "export"){
             $query = $user->getAllUsersEventAdmin();  
             $header = array('ID', 'waiting_list', 'email', 'verified', 'createdate','role','event');
             
             $filename = "user-events";            
             $filename .= date("Y-m-d h:i:sa");
-            $filename .= ".csv";
+            $filename .= $format;
             exportCSV($query, $header,$filename);    
         }
 
@@ -50,7 +53,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
             
             $filename = "user-events-responses_";                        
             $filename .= date("Y-m-d h:i:sa");
-            $filename .= ".csv";
+            $filename .= $format;
 
             exportCSV($query, $header, $filename);    
         }
@@ -60,7 +63,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
             $header = array('ID', 'question', 'number', 'response', 'name_form','survey','role');            
             $filename = "questions_";                        
             $filename .= date("Y-m-d h:i:sa");
-            $filename .= ".csv";
+            $filename .= $format;
 
             exportCSV($query, $header, $filename);    
         }
@@ -71,7 +74,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
           $header = array('ID', 'email', 'verified', 'createdate');            
           $filename = "users_";                        
           $filename .= date("Y-m-d h:i:sa");
-          $filename .= ".csv";
+          $filename .= $format;
 
           exportCSV($query, $header, $filename);    
       }
@@ -138,6 +141,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
             <tr>
               <th>ID</th>              
               <th>VERIFIED</th>
+              <th>JOINED</th>
               <th>EMAIL</th>              
               <th>CREATE DATE</th>
               <th>ACTIONS</th>
@@ -145,33 +149,48 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
           </thead>
           <tbody>
           <?php
-            $query_users = $user->getAllUsersAdmin();  
-
+            $query_users              = $user->getAllUsersAdmin();  
+            $query_user_event         = $user_event->getAll();
+            $id_user_users_event      = array();
+            foreach($query_user_event as $q_user_event):                
+                $id_user_users_event[] = $q_user_event["id_user"];
+            endforeach;
+            
             foreach($query_users as $key => $value):
                 echo "<tr>";
-                    echo "<td>";
-                    echo $value["id_user"];
-                    echo "</td>";                    
-                    echo "<td>";
-                    if($value["verified"] == 0)
-                    {echo "NO";}
-                    elseif($value["verified"] == 1)
-                    {echo "YES";}
-                    elseif($value["verified"] == 2)
-                    {echo "TERMINATED";}                    
-                    elseif($value["verified"] == 3)
-                    {echo "ADMIN";}                    
-                    echo "</td>";
-                    echo "<td>";
-                    echo $value["email"];
-                    echo "</td>";                    
-                    echo "<td>";
-                    echo $value["createdate"];
-                    echo "</td>";
-                    echo "<td>";
                     
-                    echo "<a href='user_crud.php?update=".$value['id_user']."'>Edit</a>\t\t";
-                    #echo "<a href='user_crud.php?delete=".$value['id_user']."'>Delete</a>";
+                    echo "<td>";
+                        echo $value["id_user"];
+                    echo "</td>";
+
+                    echo "<td>";
+                        if($value["verified"] == 0)
+                        {echo "NO";}
+                        elseif($value["verified"] == 1)
+                        {echo "YES";}
+                        elseif($value["verified"] == 2)
+                        {echo "TERMINATED";}                    
+                        elseif($value["verified"] == 3)
+                        {echo "ADMIN";}                    
+                    echo "</td>";
+
+                    echo "<td>";
+                        if(in_array($value["id_user"], $id_user_users_event))
+                        {echo "YES";}
+                        else{echo "NO";}                        
+                    echo "</td>";
+
+                    echo "<td>";
+                        echo $value["email"];
+                    echo "</td>";                    
+
+                    echo "<td>";
+                        echo $value["createdate"];
+                    echo "</td>";
+
+                    echo "<td>";                    
+                        echo "<a href='user_crud.php?update=".$value['id_user']."'>Edit</a>\t\t";
+                        #echo "<a href='user_crud.php?delete=".$value['id_user']."'>Delete</a>";
                     echo "</td>";
                 echo "</tr>";
             endforeach;
