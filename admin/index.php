@@ -34,16 +34,14 @@ session_start();
        
 
 if($_SESSION["verified"] == 3) ## 3 is for admin account
-{                          
-        $format = ".csv";
-
+{                                  
         if($_POST["export-user-event"] == "export"){
             $query = $user->getAllUsersEventAdmin();  
             $header = array('ID', 'waiting_list', 'email', 'verified', 'createdate','role','event');
             
             $filename = "user-events";            
             $filename .= date("Y-m-d h:i:sa");
-            $filename .= $format;
+            $filename .= ".csv";
             exportCSV($query, $header,$filename);    
         }
 
@@ -53,7 +51,7 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
             
             $filename = "user-events-responses_";                        
             $filename .= date("Y-m-d h:i:sa");
-            $filename .= $format;
+            $filename .= ".csv";
 
             exportCSV($query, $header, $filename);    
         }
@@ -63,18 +61,18 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
             $header = array('ID', 'question', 'number', 'response', 'name_form','survey','role');            
             $filename = "questions_";                        
             $filename .= date("Y-m-d h:i:sa");
-            $filename .= $format;
+            $filename .= ".csv";
 
             exportCSV($query, $header, $filename);    
         }
 
         if($_POST["export-users"] == "export"){
-          $query = $user->getAllUsersAdmin();              
+          $query = $user->getAllUsersJoinedAndNotJoined();              
           
-          $header = array('ID', 'email', 'verified', 'createdate');            
+          $header = array('ID', 'email', 'verified', 'joined', 'createdate');            
           $filename = "users_";                        
           $filename .= date("Y-m-d h:i:sa");
-          $filename .= $format;
+          $filename .= ".csv";
 
           exportCSV($query, $header, $filename);    
       }
@@ -131,12 +129,12 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
                 <button  style="width: 12%;" type="submit" value="export" name="export-user-event" class="button">User-Events</button>                
                 <button  style="width: 10%; float:center; " type="submit" value="export" name="export-user-response" class="button">Responses</button>
                 <button  style="width: 10%; float:center; " type="submit" value="export" name="export-questions" class="button">Questions</button>
-                <button  style="width: 10%; float:center; " type="submit" value="export" name="export-users" class="button">Users</button>
+                <button  style="width: 10%; float:center; " type="submit" value="export" name="export-users" class="button">Users</button>                
                 </div>                
                 </form>
             </div>
-
-      <table class="table table-striped" data-effect="fade">
+      
+      <table id="thetable" class="table table-striped" data-effect="fade">
           <thead>
             <tr>
               <th>ID</th>              
@@ -205,8 +203,6 @@ if($_SESSION["verified"] == 3) ## 3 is for admin account
   </section>
   <!-- end section -->
 <!-- Content Ends hhere -->
-
-
 
 
 <?php $component->getFooter(); ?>

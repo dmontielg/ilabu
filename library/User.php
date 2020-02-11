@@ -292,6 +292,33 @@
 				return $arrayusers ;
 		}
 
+		function getAllUsersJoinedAndNotJoined()
+		{
+				$sql = "
+				
+					SELECT user.id_user as id_user, user.email as email, user.verified as verified, 
+					IF(user_event.id_user is null or user_event.id_user = '', 'NO', 'YES') as joined,
+					user.createdate as createdate					
+					FROM user
+					LEFT OUTER JOIN user_event
+					ON user.id_user = user_event.id_user
+					WHERE user_event.id_user IS NULL
+					OR user_event.id_user IS NOT NULL
+					Order by user.id_user DESC				
+				" 
+				;
+				$resultado = $this->connection->query($sql) ;
+				$arrayusers = array() ;
+				if($resultado->num_rows>0)
+				{
+					while ($row = $resultado->fetch_assoc())
+					{
+						$arrayusers[] = $row ;
+					}
+				}
+				return $arrayusers ;
+		}
+
 		function getAllUsersEventAdmin()
 		{
 			$sql = "						
