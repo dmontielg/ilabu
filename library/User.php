@@ -297,7 +297,7 @@
 				$sql = "
 				
 					SELECT user.id_user as id_user, user.email as email, user.verified as verified, 
-					IF(user_event.id_user is null or user_event.id_user = '', 'NO', 'YES') as joined,
+					IF(user_event.id_user is null or user_event.id_user = '', '0', '1') as joined,
 					user.createdate as createdate					
 					FROM user
 					LEFT OUTER JOIN user_event

@@ -118,11 +118,12 @@ if( !empty($_SESSION) )
                                             <option value="1">                                              
                                             1. The spark Between Us (24.01.2020)
                                             </option>
-                                            -->
+                                            
                                             <option value="2">                                              
                                             2. Getting closer (28.02.2020)
                                             </option>
                                             <option value="3">
+                                            -->
                                             3. Let's talk about life (27.03.2020)
                                             </option>
                                             <option value="4">
@@ -217,7 +218,9 @@ if( !empty($_SESSION) )
             </div>
             <h4>Getting closer</h4>
             <p>For discussions in topics like <br> virology, microbiology, transport, astronomy, nanotechnology, and psychology.</p>
-            <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
+            <?php
+             #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}
+             ?>            
           </div>
         </div>
         <!-- end dmbox -->
@@ -277,19 +280,22 @@ if( !empty($_SESSION) )
         <div class="clearfix"></div>
         <div class="divider" id="container-show-event"></div>
           
-
       <section class="section1">
-        <div class="container" >
-            
-            <div class="show-event1" style="display:none;">
-              <h3>Spark Between Us</h3>
-              <p>
-              What causes the initial spark between two people? Is it a smile your date gives you when you meet? The first accidental touch? Or something more scientific, like a combination of chemicals flooding in your brain because of your compatible pheromones? Let’s see what the explanation for this wonderful sensation might be! In this event you may meet from neuroscientists working on the electrical synapses in our brain, to behavioral scientists shedding light on how human emotions work, or to electrical engineers discussing actual sparks! 
-   <p>
-     If this sparks your interest, please register and join us 
-     <a href="register.php"> here </a>
-   <p>.
-              </p>
+        <div class="container" >            
+            <div class="show-event1" style="display:none;">                                        
+
+                <div class="general-title text-center">
+                <h3>Spark Between Us</h3>                        
+                </div>                             
+                <div class="container clearfix" style="width:75%; text-align: justify; text-justify: inter-word;">
+                        <p>                        
+                          What causes the initial spark between two people? Is it a smile your date gives you when you meet? The first accidental touch? Or something more scientific, like a combination of chemicals flooding in your brain because of your compatible pheromones? Let’s see what the explanation for this wonderful sensation might be! In this event you may meet from neuroscientists working on the electrical synapses in our brain, to behavioral scientists shedding light on how human emotions work, or to electrical engineers discussing actual sparks!                           
+                          <br/><br/>
+                          If this sparks your interest, please register and join us       
+                          <a href="register.php"> here </a>                                     
+                        </p>   
+                </div>
+                
               <div class="general-title text-center">
                     <center>                    
                     <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN TO AN EVENT!</button>';}?>            
@@ -297,14 +303,17 @@ if( !empty($_SESSION) )
                 </div>                
             </div>
             <div class="show-event2" style="display:none;">
-              <h3>Getting Closer</h3>
-              <p>
-              The spark is in, the drinks are on the table. Time to get closer. What are the first things you exchange? A smile, touch, or… some bacteria? Yikes! Probably all three. So, let’s get comfortable with talking about being close. Virologists and microbiologists will be there to explain to you how unique every touch is, but also astronomers how we can cross the universe and move the stars! But if you are more practical, maybe a urban transport expert will tell you how the city infrastructure works to get us closer, and a psychologist will be there to help you find out how you can get closer to someone’s heart and brain. 
-              </p>              
-              <p>
-              If you want to get closer, please register and join us 
-              <a href="register.php"> here </a>
-            <p>.
+                  <div class="general-title text-center">
+                      <h3>Getting Closer</h3>
+                  </div>                             
+                  <div class="container clearfix" style="width:75%; text-align: justify; text-justify: inter-word;">
+                              <p>                        
+                              The spark is in, the drinks are on the table. Time to get closer. What are the first things you exchange? A smile, touch, or… some bacteria? Yikes! Probably all three. So, let’s get comfortable with talking about being close. Virologists and microbiologists will be there to explain to you how unique every touch is, but also astronomers how we can cross the universe and move the stars! But if you are more practical, maybe a urban transport expert will tell you how the city infrastructure works to get us closer, and a psychologist will be there to help you find out how you can get closer to someone’s heart and brain. 
+                                <br/><br/>
+                                If you want to get closer, please register and join us 
+                                <a href="register.php"> here </a>                                     
+                              </p>   
+                  </div>              
               <div class="general-title text-center">
                     <center>
                     <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN TO AN EVENT!</button>';}?>            
@@ -312,15 +321,17 @@ if( !empty($_SESSION) )
                 </div>                
             </div>
             <div class="show-event3" style="display:none;">
-              <h3>Let's talk about life</h3>
-              <p>
-              Time to dig deeper and discuss all the things that make us human! Will you talk over koetjes en kalfjes like the Dutch say or share your life lesson on a date? Whatever you decide, we got you. Join us for this event to ask a doctor or a biomedical researcher about how our life choices change our health. Did you ever wonder why our bodies work the way they do? Or perhaps you are interested to explore the life of mind and talk to psychologists or philosophers? In case you are also keen to learn about the life beyond… life, experts in artificial intelligence may help you out.
-              </p>
-              <p>
-              If you want to talk about life, please register and join us 
-              <a href="register.php"> here </a>
-              <p>.
-
+                  <div class="general-title text-center">
+                      <h3>Let's talk about life</h3>
+                  </div>                             
+                  <div class="container clearfix" style="width:75%; text-align: justify; text-justify: inter-word;">
+                              <p>                        
+                              Time to dig deeper and discuss all the things that make us human! Will you talk over koetjes en kalfjes like the Dutch say or share your life lesson on a date? Whatever you decide, we got you. Join us for this event to ask a doctor or a biomedical researcher about how our life choices change our health. Did you ever wonder why our bodies work the way they do? Or perhaps you are interested to explore the life of mind and talk to psychologists or philosophers? In case you are also keen to learn about the life beyond… life, experts in artificial intelligence may help you out.
+                                <br/><br/>
+                                If you want to talk about life, please register and join us 
+                                <a href="register.php"> here </a>                                     
+                              </p>   
+                  </div>                            
               <div class="general-title text-center">
                     <center>
                     <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}?>            
@@ -328,15 +339,17 @@ if( !empty($_SESSION) )
                 </div>                
             </div>
             <div class="show-event4" style="display:none;">
-              <h3>Who pays the bill?</h3>
-              <p>
-              The end of the date is near. Now it’s a time to settle the bill. Are you going Dutch and share the bill? Or maybe you are more traditional and would like to treat your partner? Whatever you choose, talking about money is an important aspect to any new relationship. Experts from finance, management, economics, and logistics can help you settle down your finances and decide who should pay for that delicious beer you just had. Luckily on this event, it is on us! But maybe we need to show you the way into your financing decisions and give you the chance to consult a health economist, so you can make the wisest choice.
-              </p>
-              <p>
-              If you want to save money, please register and join us 
-              <a href="register.php"> here </a>
-              <p>.
-
+                  <div class="general-title text-center">
+                    <h3>Who pays the bill?</h3>
+                  </div>                             
+                  <div class="container clearfix" style="width:75%; text-align: justify; text-justify: inter-word;">
+                              <p>                        
+                              The end of the date is near. Now it’s a time to settle the bill. Are you going Dutch and share the bill? Or maybe you are more traditional and would like to treat your partner? Whatever you choose, talking about money is an important aspect to any new relationship. Experts from finance, management, economics, and logistics can help you settle down your finances and decide who should pay for that delicious beer you just had. Luckily on this event, it is on us! But maybe we need to show you the way into your financing decisions and give you the chance to consult a health economist, so you can make the wisest choice.
+                                <br/><br/>
+                                If you want to save money, please register and join us 
+                                <a href="register.php"> here </a>                                     
+                              </p>   
+                  </div>                                        
               <div class="general-title text-center">
                     <center>
                     <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}?>            
