@@ -43,7 +43,6 @@
       
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="he-wrap tpl2">
-
                                     
                     <div class="carousel-item active">
                       <img class="d-block w-100" src="img/staff/team.jpg" alt="First slide">

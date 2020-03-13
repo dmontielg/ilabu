@@ -196,16 +196,18 @@ class Component{
                       <li class="active"><a href="#">Photos</a>
                       <ul class="dropdown">
                         <li><a href="spark_photos.php">The spark between us</a></li>                        
+                        <li><a href="closer_photos.php">Getting closer</a></li>                        
                       </ul>
                     </li>
                     ';
 
-                     }else{
+                    }else{
 
                       $menu .= '
                       <li><a href="#">Photos</a>
                       <ul class="dropdown">
                         <li><a href="spark_photos.php">The spark between us</a></li>                        
+                        <li><a href="closer_photos.php">Getting closer</a></li>                        
                       </ul>
                     </li>';
 

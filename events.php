@@ -122,10 +122,11 @@ if( !empty($_SESSION) )
                                             <option value="2">                                              
                                             2. Getting closer (28.02.2020)
                                             </option>
-                                            <option value="3">
-                                            -->
+                                            
+                                            <option value="3">                                            
                                             3. Let's talk about life (27.03.2020)
                                             </option>
+                                            -->
                                             <option value="4">
                                             4. Who pays the bill? (24.04.2020)
                                             </option>
@@ -237,7 +238,9 @@ if( !empty($_SESSION) )
             </div>
             <h4>Let's talk about life</h4>
             <p>For discussions in topics like <br> medicine, biomedical sciences, sociology, artificial intelligence, and philosophy.</p>
-            <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
+            <?php 
+            #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}
+            ?>            
           </div>
         </div>    
 
@@ -358,15 +361,17 @@ if( !empty($_SESSION) )
             </div>
             
             <div class="show-event5" style="display:none;">
-              <h3>What's next?</h3>
-              <p>
-              While you are anxiously waiting for your date to call you back after this amazing time you had together, it might be time to think about the next step. Let’s figure it out together. Are you going to have another date, a child together, or move to a new city? Do you want to see what goes into building your dream house? Ask an architect. Do you want to know how cities will evolve in the future? Ask an urban planner. Are you worried about the future of earth, come and discuss your worries with environmental scientists and global warming experts. And if you already have your children’s names picked out, maybe talk to a pediatrician instead.
-              </p>
-              <p>
-              If you wonder about the future, please register and join us 
-              <a href="register.php"> here </a>
-              <p>.
-
+                  <div class="general-title text-center">
+                      <h3>What's next?</h3>
+                  </div>                             
+                  <div class="container clearfix" style="width:75%; text-align: justify; text-justify: inter-word;">
+                              <p>                        
+                              While you are anxiously waiting for your date to call you back after this amazing time you had together, it might be time to think about the next step. Let’s figure it out together. Are you going to have another date, a child together, or move to a new city? Do you want to see what goes into building your dream house? Ask an architect. Do you want to know how cities will evolve in the future? Ask an urban planner. Are you worried about the future of earth, come and discuss your worries with environmental scientists and global warming experts. And if you already have your children’s names picked out, maybe talk to a pediatrician instead.
+                                <br/><br/>
+                                If you wonder about the future, please register and join us 
+                                <a href="register.php"> here </a>                                     
+                              </p>   
+                  </div>                                        
                   <div class="general-title text-center">
                     <center>
                     <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}?>            
@@ -418,7 +423,7 @@ if( !empty($_SESSION) )
                     </tr>
                     <tr>
                       <th scope="row">Let's talk about life</th>
-                      <td>27.03.2020</td>
+                      <td>27.03.2020 <strong style="color:red">(Postponed)</strong></td>
                       <td>18:00</td>
                       <td>Erasmus MC</td>
                       <td>Rotterdam</td>
