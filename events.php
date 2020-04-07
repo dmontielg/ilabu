@@ -257,7 +257,9 @@ if( !empty($_SESSION) )
               </div>
               <h4>Who pays the bill?</h4>
               <p>For discussions in topics like <br> finances, management, logistics, health economy, and psychology.</p>
-              <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
+              <?php 
+              #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}
+              ?>            
             </div>
         </div>
 
@@ -274,7 +276,9 @@ if( !empty($_SESSION) )
                   </div>
                 </div>
                 <h4>What's next?</h4>                
-                <p>For discussions in topics like <br> environment, architecture, urban planning, global warming, green energy, and pediatrics.</p>                <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}?>            
+                <p>For discussions in topics like <br> environment, architecture, urban planning, global warming, green energy, and pediatrics.</p>                <?php 
+                #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button>';}
+                ?>            
               </div>
         </div>
 
@@ -301,7 +305,9 @@ if( !empty($_SESSION) )
                 
               <div class="general-title text-center">
                     <center>                    
-                    <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN TO AN EVENT!</button>';}?>            
+                    <?php 
+                    #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN TO AN EVENT!</button>';}
+                    ?>            
                     </center>
                 </div>                
             </div>
@@ -319,7 +325,9 @@ if( !empty($_SESSION) )
                   </div>              
               <div class="general-title text-center">
                     <center>
-                    <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN TO AN EVENT!</button>';}?>            
+                    <?php 
+                    #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN TO AN EVENT!</button>';}
+                    ?>            
                     </center>
                 </div>                
             </div>
@@ -337,7 +345,9 @@ if( !empty($_SESSION) )
                   </div>                            
               <div class="general-title text-center">
                     <center>
-                    <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}?>            
+                    <?php 
+                    #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}
+                    ?>            
                     </center>
                 </div>                
             </div>
@@ -355,7 +365,9 @@ if( !empty($_SESSION) )
                   </div>                                        
               <div class="general-title text-center">
                     <center>
-                    <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}?>            
+                    <?php 
+                    #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}
+                    ?>            
                     </center>
                 </div>                
             </div>
@@ -374,7 +386,9 @@ if( !empty($_SESSION) )
                   </div>                                        
                   <div class="general-title text-center">
                     <center>
-                    <?php if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}?>            
+                    <?php 
+                    #if( !empty($_SESSION["email"]) ){echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">JOIN THIS EVENT!</button>';}
+                    ?>            
                     </center>
                 </div>                
             </div>
@@ -430,14 +444,14 @@ if( !empty($_SESSION) )
                     </tr>
                     <tr>
                       <th scope="row">Who pays the bill?</th>
-                      <td>24.04.2020</td>
+                      <td>24.04.2020 <strong style="color:red">(Postponed)</strong></td>
                       <td>18:00</td>
                       <td>Erasmus Pavijloen</td>
                       <td>Rotterdam</td>
                     </tr>
                     <tr>
                       <th scope="row">What's next?</th>
-                      <td>29.05.2020</td>
+                      <td>29.05.2020  <strong style="color:red">(Postponed)</strong></td>
                       <td>18:00</td>
                       <td>Prinsenkwartier</td>
                       <td>Delft</td>
